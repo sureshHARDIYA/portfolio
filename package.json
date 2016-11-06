@@ -15,6 +15,7 @@
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
     "react-dom": "15.3.2",
+    "react-event-timeline": "1.1.2",
     "react-router": "4.0.0-alpha.3"
   },
   "scripts": {
@@ -24,7 +25,7 @@
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
-  },
+    },
   "author": "Suresh Kumar Mukhiys <itsmeskm99@gmail.com>",
   "license": "MIT"
 }
