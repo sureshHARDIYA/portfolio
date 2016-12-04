@@ -5,7 +5,7 @@ import {Timeline, TimelineEvent} from 'react-event-timeline'
 const Education = () => <Timeline>
   <TimelineEvent title="John Doe sent a SMS"
     createdAt="2016-09-12 10:06 PM"
-    icon={<i className="material-icons md-18">textsms</i>}
+    icon={<i className="uk-icon-hover uk-icon-small uk-icon-github"/>}
     iconColor="#6fba1c"
   >
     I received the payment for $543. Should be shipping the item within a couple of hours. Thanks for the
@@ -14,7 +14,7 @@ const Education = () => <Timeline>
   <TimelineEvent
     title="You sent an email to John Doe"
     createdAt="2016-09-11 09:06 AM"
-    icon={<i className="material-icons md-18">email</i>}
+    icon={<i className="uk-icon-hover uk-icon-small uk-icon-envelope"/>}
     iconColor="#03a9f4"
   >
     <p>Subject: Any updates?</p>
