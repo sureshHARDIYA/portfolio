@@ -22,7 +22,8 @@
     "react-height": "2.1.1",
     "react-motion": "0.4.5",
     "react-router": "4.0.0-alpha.3",
-    "uikit": "^2.27.2"
+    "uikit": "^2.27.2",
+    "uikit-react": "2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

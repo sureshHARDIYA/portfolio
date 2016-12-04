@@ -4,8 +4,11 @@ import { Component, PropTypes } from 'react'
 import Match from 'react-router/Match'
 import Miss from 'react-router/Miss'
 import Redirect from 'react-router/Redirect'
-
+import Footer from './Footer'
 import Sidebar from './Sidebar'
+import NotFound from './NotFound'
+import Header from './Header'
+//import './Home.less'
 
 class Home extends Component {
   static propTypes = {
@@ -20,13 +23,11 @@ class Home extends Component {
     menu: [
       { label: 'Home' },
       { to: '/app', icon: 'dashboard', label: 'dashboard', activeOnlyWhenExact: true },
+      { to: '/education', icon: 'dashboard', label: 'Education', activeOnlyWhenExact: true },
       {
-        to: '/admin/orders',
-        icon: 'inbox',
-        label: 'orders',
-        sub: [
-          { to: '/admin/orders', label: 'orders', activeOnlyWhenExact: true },
-        ],
+        to: '/contact',
+        icon: 'envelope',
+        label: 'contact',
       },
     ],
   }
@@ -90,6 +91,8 @@ class Home extends Component {
           'sidebar-open': open,
         })}
       >
+        <Header
+        />
         <div className="main uk-flex-item-1 uk-flex">
           <Sidebar
             isCollapsed={collapsed}
@@ -100,7 +103,11 @@ class Home extends Component {
           <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between">
             <div className="uk-flex-item-auto">
               Something is coming up
+              <button className="uk-button uk-button-large uk-button-success">Succes Text Button</button>
+              {!children && <Miss component={NotFound} />}
+              {children}
             </div>
+            <Footer />
           </div>
         </div>
       </div>
