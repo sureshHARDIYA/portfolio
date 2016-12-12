@@ -8,7 +8,7 @@ import Footer from './Footer'
 import Sidebar from './Sidebar'
 import NotFound from './NotFound'
 import Header from './Header'
-//import './Home.less'
+import Education from './Education/index';
 
 class Home extends Component {
   static propTypes = {
@@ -24,6 +24,10 @@ class Home extends Component {
       { label: 'Home' },
       { to: '/app', icon: 'dashboard', label: 'dashboard', activeOnlyWhenExact: true },
       { to: '/education', icon: 'dashboard', label: 'Education', activeOnlyWhenExact: true },
+      { to: '/skills', icon: 'dashboard', label: 'Skills', activeOnlyWhenExact: true },
+      { to: '/jobHistory', icon: 'dashboard', label: 'Job History', activeOnlyWhenExact: true },
+      { to: '/portfolio', icon: 'dashboard', label: 'Portfolio', activeOnlyWhenExact: true },
+      { to: '/reference', icon: 'dashboard', label: 'Reference', activeOnlyWhenExact: true },
       {
         to: '/contact',
         icon: 'envelope',
@@ -99,11 +103,9 @@ class Home extends Component {
             menus={menu}
             onClick={open && handleLinkClick}
           />
-          {/* {open && <div className="main-sidebar-shadow" onClick={handleCloseOffCanvas} />} */}
+          {open && <div className="main-sidebar-shadow" onClick={handleCloseOffCanvas} />}
           <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between">
             <div className="uk-flex-item-auto">
-              Something is coming up
-              <button className="uk-button uk-button-large uk-button-success">Succes Text Button</button>
               {!children && <Miss component={NotFound} />}
               {children}
             </div>

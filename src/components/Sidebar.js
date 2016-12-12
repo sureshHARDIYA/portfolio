@@ -26,7 +26,7 @@ export default class Sidebar extends Component {
     const { handleToggle } = this
 
     return (
-      <aside className="main-sidebar uk-contrast" onClick={onClick}>
+      <aside className="main-sidebar uk-contrast" onClick={onClick} style={{background: '#dadada'}}>
         <ul className="uk-nav uk-nav-side uk-nav-parent-icon">
           {menus.map((menu) => {
             const { to, label, sub } = menu
