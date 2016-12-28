@@ -1,65 +1,58 @@
-import { Component, PropTypes } from 'react'
-import NavLink from './NavLink'
 import React from 'react'
+import Router from 'react-router/BrowserRouter'
+import Match from 'react-router/Match'
+import Miss from 'react-router/Miss'
+import Link from 'react-router/Link'
+import Redirect from 'react-router/Redirect'
+import Education from './Education/index';
+import Skills from './Skills';
+import NotFound from './NotFound'
 
-export default class Sidebar extends Component {
-  static propTypes = {
-    isCollapsed: PropTypes.bool.isRequired,
-    menus: PropTypes.array.isRequired,
-    onClick: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.bool,
-    ]).isRequired,
+const routes = [
+  { pattern: '/',
+    exactly: true,
+    main: () => <Education />
+  },
+  { pattern: '/education',
+    main: () => <Education />
+  },
+  { pattern: '/skills',
+    main: () => <Skills />
+  },
+  { pattern: '/jobHistory',
+    main: () => <Skills />
   }
+]
 
-  state = { open: true }
-
-  handleToggle = (event) => {
-    event.preventDefault()
-    const to = event.target.dataset.to
-    this.setState({ open: to === this.state.open ? false : to })
-  }
-
-  render() {
-    const { menus, isCollapsed, onClick } = this.props
-    const { open } = this.state
-    const { handleToggle } = this
-
-    return (
-      <aside className="main-sidebar uk-contrast" onClick={onClick} style={{background: '#dadada'}}>
-        <ul className="uk-nav uk-nav-side uk-nav-parent-icon">
-          {menus.map((menu) => {
-            const { to, label, sub } = menu
-            const submenu = sub ? (
-              <ul className="uk-nav-sub">{sub.map(
-                (o) => (
-                  <NavLink
-                    key={menu.to + o.to}
-                    {...o}
-                    icon="circle-o"
-                  />
-                )
-              )}
-              </ul>
-            ) : false
-            if (!to) {
-              return <li className="uk-nav-header" key={label}>{label}</li>
-            }
-            const props = {
-              ...menu,
-              linkClassName: 'uk-nav-side-link',
-              onToggle: handleToggle,
-              isCollapsible: !isCollapsed,
-              collapsed: isCollapsed,
-              open: isCollapsed || open === menu.to,
-            }
-
-            return (
-              <NavLink key={to} {...props}>{submenu}</NavLink>
-            )
-          })}
+const Sidebar = ({ history }) => (
+  <Router history={history}>
+    <div style={{ display: 'flex' }}>
+      <div style={{
+        padding: '10px',
+        width: '20%',
+        background: '#f0f0f0'
+      }}>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/education">Education</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/jobHistory">Job History</Link></li>
         </ul>
-      </aside>
-    )
-  }
-}
+      </div>
+
+      <div style={{ flex: 1, padding: '10px' }}>
+        {routes.map((route, index) => (
+          <Match
+            key={index}
+            pattern={route.pattern}
+            component={route.main}
+            exactly={route.exactly}
+          />
+        ))}
+        <Miss component={NotFound} />
+      </div>
+    </div>
+  </Router>
+)
+
+export default Sidebar

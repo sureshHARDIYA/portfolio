@@ -6,9 +6,9 @@ import Miss from 'react-router/Miss'
 import Redirect from 'react-router/Redirect'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
-import NotFound from './NotFound'
 import Header from './Header'
 import Education from './Education/index';
+import Skills from './Skills';
 
 class Home extends Component {
   static propTypes = {
@@ -106,12 +106,11 @@ class Home extends Component {
           {open && <div className="main-sidebar-shadow" onClick={handleCloseOffCanvas} />}
           <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between">
             <div className="uk-flex-item-auto">
-              {!children && <Miss component={NotFound} />}
               {children}
             </div>
-            <Footer />
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

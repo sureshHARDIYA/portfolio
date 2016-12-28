@@ -1,58 +1,58 @@
-// This is just some sample data so you don't have to think of your own!
-module.exports = {
-  JavaScript: {
+const skills = [
+  {
+    name: 'JavaScript',
     comment: 'Suresh Kumar Mukhiya',
     level: 'intermediate',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
-  'reactjs': {
+  {
+    name: 'ReactJS',
     comment: 'itsmeskm99@gmail.com',
     level: 'beginner',
     link: 'https://facebook.github.io/react/',
-  }
-  'react-redux': {
+  },
+  {
+    name: 'Redux',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'http://redux.js.org/',
-  }
-  'react-router': {
+  },
+  {
+    name: 'React-Router',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'https://github.com/ReactTraining/react-router',
   },
-  'php': {
+  {
+    name: 'PHP',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'http://php.net/',
-  }
-  'Laravel': {
+  },
+  {
+    name: 'LARAVEL',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'https://laravel.com/',
-  }
-  'WordPress': {
+  },
+  {
+    name: 'WordPress',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'https://wordpress.org/',
-  }
-  'HTML5': {
+  },
+  {
+    name: 'BootStrap',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
     link: 'https://wordpress.org/',
-  }
-  'CSS3': {
-    comment: 'itsmeskm99@gmail.com',
-    level: 'intermediate',
-    link: 'https://wordpress.org/',
-  }
-  'Bootstrap': {
-    comment: 'itsmeskm99@gmail.com',
-    level: 'intermediate',
-    link: 'https://wordpress.org/',
-  }
-  'Uikit': {
+  },
+  {
+    name: 'uikit',
     comment: 'A lightweight and modular front-end framework for developing fast and powerful web interfaces.',
     level: 'intermediate',
     link: 'https://getuikit.com/',
   }
-};
+]
+
+export default skills

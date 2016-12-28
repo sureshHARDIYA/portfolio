@@ -1,7 +1,4 @@
-import cx from 'classnames'
-import { Component, PropTypes } from 'react'
-import { Dropdown } from 'uikit-react'
-import Link from 'react-router/Link'
+import { Component } from 'react'
 import React from 'react'
 
 class Header extends Component {
