@@ -1,6 +1,6 @@
 import React from 'react'
 import {Timeline, TimelineEvent} from 'react-event-timeline'
-//import data from '../../data/education.js'
+import educations from '../../data/education.js'
 
 const Education = () => <Timeline>
   <TimelineEvent title="John Doe sent a SMS"
