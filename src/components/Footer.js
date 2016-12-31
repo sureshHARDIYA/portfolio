@@ -6,7 +6,7 @@ const Footer = ({ year }) => {
   const { general } = settings
   return (<footer className="main-footer">
     <div className="uk-flex uk-flex-middle uk-flex-space-between uk-flex-wrap">
-      <div className="uk-row-first">
+      <div className="uk-row-first uk-text-center">
         <strong>
           {`© 2005 - ${year}`} <a href={general.homepage} rel="noopener noreferrer" target="_blank">
             {general.sitename}

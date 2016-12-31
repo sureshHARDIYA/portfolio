@@ -3,9 +3,9 @@ import Router from 'react-router/BrowserRouter'
 import Match from 'react-router/Match'
 import Miss from 'react-router/Miss'
 import Link from 'react-router/Link'
-import Redirect from 'react-router/Redirect'
 import Education from './Education/index';
 import Skills from './Skills';
+import Hobbies from './Hobbies';
 import NotFound from './NotFound'
 
 const routes = [
@@ -21,26 +21,38 @@ const routes = [
   },
   { pattern: '/jobHistory',
     main: () => <Skills />
+  },
+  { pattern: '/blog',
+    main: () => <Skills />
+  },
+  { pattern: '/hobbies',
+    main: () => <Hobbies />
+  },
+  { pattern: '/contact',
+    main: () => <Skills />
   }
 ]
 
 const Sidebar = ({ history }) => (
   <Router history={history}>
-    <div style={{ display: 'flex' }}>
-      <div style={{
-        padding: '10px',
-        width: '20%',
-        background: '#f0f0f0'
-      }}>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/education">Education</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/jobHistory">Job History</Link></li>
-        </ul>
-      </div>
-
-      <div style={{ flex: 1, padding: '10px' }}>
+    <div className="uk-grid">
+      <aside className="main-sidebar uk-width-medium-4-10">
+        <div>
+          <div>
+            <img src="./images/portfolio.png" alt="Suresh Kumar Mukhiya" width="300"/>
+          </div>
+          <ul className="uk-nav uk-nav-side uk-nav-parent-icon">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/education">Education</Link></li>
+            <li><Link to="/skills">Skills</Link></li>
+            <li><Link to="/jobHistory">Job History</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/hobbies">Hobbies</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+      </aside>
+      <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between uk-width-medium-6-10">
         {routes.map((route, index) => (
           <Match
             key={index}

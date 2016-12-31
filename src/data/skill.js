@@ -8,7 +8,7 @@ const skills = [
   {
     name: 'ReactJS',
     comment: 'itsmeskm99@gmail.com',
-    level: 'beginner',
+    level: 'intermediate',
     link: 'https://facebook.github.io/react/',
   },
   {
@@ -38,20 +38,26 @@ const skills = [
   {
     name: 'WordPress',
     comment: 'itsmeskm99@gmail.com',
-    level: 'intermediate',
+    level: 'advanced',
     link: 'https://wordpress.org/',
   },
   {
     name: 'BootStrap',
     comment: 'itsmeskm99@gmail.com',
     level: 'intermediate',
-    link: 'https://wordpress.org/',
+    link: 'http://getbootstrap.com/',
   },
   {
     name: 'uikit',
     comment: 'A lightweight and modular front-end framework for developing fast and powerful web interfaces.',
     level: 'intermediate',
     link: 'https://getuikit.com/',
+  },
+  {
+    name: 'python',
+    comment: 'Python is a programming language that lets you work quickly and integrate systems more effectively',
+    level: 'beginner',
+    link: 'https://www.python.org/',
   }
 ]
 

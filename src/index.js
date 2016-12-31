@@ -3,15 +3,14 @@ import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
 
 import './css/style.css';
-import App from './components/App';
 import Home from './components/Home';
-import NotFound from './components/NotFound';
 
-const Root = () => {
+const Root = ({children}) => {
   return (
     <BrowserRouter>
-      <div>
-        <Match exactly pattern="/" component={Home} />
+      <div className="uk-animation-fade">
+        <Home />
+        {children}
       </div>
     </BrowserRouter>
   )

@@ -1,9 +1,8 @@
 import React from 'react'
-import {Timeline, TimelineEvent} from 'react-event-timeline'
 import skills from '../data/skill.js'
 
-const Skills = () => <div>
-  {skills.map((skill, key) => <div>
+const Skills = () => <div className="uk-animation-slide-right">
+  {skills.map((skill, index) => <div key={index}>
     {skill.name}<br/>
     {skill.link}<br/>
   </div>
