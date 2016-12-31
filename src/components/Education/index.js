@@ -2,7 +2,7 @@ import React from 'react'
 import {Timeline, TimelineEvent} from 'react-event-timeline'
 import educations from '../../data/education.js'
 
-const Education = () => <Timeline>
+const Education = () => <Timeline className="uk-animation-slide-right">
   <TimelineEvent title="John Doe sent a SMS"
     createdAt="2016-09-12 10:06 PM"
     icon={<i className="uk-icon-hover uk-icon-small uk-icon-github"/>}

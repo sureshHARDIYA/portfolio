@@ -26,6 +26,9 @@
     "uikit": "^2.27.2",
     "uikit-react": "2.0.0"
   },
+  "_moduleAliases": {
+    "portfolio": "src"
+  },
   "scripts": {
     "start": "react-scripts start",
     "watch": "concurrently --names 'webpack, stylus' --prefix name 'npm run start' 'npm run styles:watch'",

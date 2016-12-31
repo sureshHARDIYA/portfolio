@@ -6,9 +6,6 @@ import Miss from 'react-router/Miss'
 import Redirect from 'react-router/Redirect'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
-import Header from './Header'
-import Education from './Education/index';
-import Skills from './Skills';
 
 class Home extends Component {
   static propTypes = {
@@ -35,51 +32,7 @@ class Home extends Component {
       },
     ],
   }
-
-  state = {
-    collapsed: false,
-    open: false,
-  }
-
-  handleToggleCollapsed = (event) => {
-    event.preventDefault()
-    this.setState({ collapsed: !this.state.collapsed }, () => {
-      setTimeout(() => window.dispatchEvent(new Event('resize')), 300)
-    })
-  }
-
-  handleToggleOffCanvas = (event) => {
-    event.preventDefault()
-    this.setState({ open: !this.state.open })
-  }
-
-  handleCloseOffCanvas = (event) => {
-    event.preventDefault()
-    this.setState({ open: false })
-  }
-
-  handleLinkClick = (event) => {
-    const target = event.target
-
-    let node
-    if (target.tagName === 'A') {
-      node = target
-    }
-    if (!node && target.parentNode.tagName === 'A') {
-      node = target.parentNode
-    }
-    if (!node.parentNode.classList.contains('uk-parent')) {
-      this.setState({ open: false })
-    }
-  }
-
   render() {
-    const {
-      handleToggleCollapsed,
-      handleToggleOffCanvas,
-      handleCloseOffCanvas,
-      handleLinkClick,
-    } = this
     const {
         user,
         isLoading,
@@ -87,28 +40,12 @@ class Home extends Component {
         menu,
         children,
       } = this.props
-    const { collapsed, open } = this.state
     return (
-      <div
-        className={classNames('tm-admin uk-flex uk-flex-column', {
-          'sidebar-toggled': collapsed,
-          'sidebar-open': open,
-        })}
-      >
-        <Header
-        />
+      <div>
         <div className="main uk-flex-item-1 uk-flex">
           <Sidebar
-            isCollapsed={collapsed}
             menus={menu}
-            onClick={open && handleLinkClick}
           />
-          {open && <div className="main-sidebar-shadow" onClick={handleCloseOffCanvas} />}
-          <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between">
-            <div className="uk-flex-item-auto">
-              {children}
-            </div>
-          </div>
         </div>
         <Footer />
       </div>
