@@ -11,6 +11,7 @@ import Contact from './Contact';
 import JobHistory from './JobHistory/index'
 import NotFound from './NotFound'
 import settings from '../data/settings'
+import Footer from './Footer'
 
 const routes = [
   { pattern: '/',
@@ -75,6 +76,7 @@ const Sidebar = ({ history }) => (
             exactly={route.exactly}
           />
         ))}
+        <Footer />
         <Miss component={NotFound} />
       </div>
     </div>
