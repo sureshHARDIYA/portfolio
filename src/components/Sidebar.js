@@ -36,7 +36,7 @@ const routes = [
 const Sidebar = ({ history }) => (
   <Router history={history}>
     <div className="uk-grid">
-      <aside className="main-sidebar uk-width-medium-4-10">
+      <aside className="main-sidebar uk-width-medium-1-4 uk-sticky-placeholder">
         <div>
           <div>
             <img src="./images/portfolio.png" alt="Suresh Kumar Mukhiya" width="300"/>
@@ -52,7 +52,7 @@ const Sidebar = ({ history }) => (
           </ul>
         </div>
       </aside>
-      <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between uk-width-medium-6-10">
+      <div className="main-content main-scroll uk-flex-item-1 uk-flex uk-flex-column uk-flex-space-between uk-width-medium-3-4">
         {routes.map((route, index) => (
           <Match
             key={index}

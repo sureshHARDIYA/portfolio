@@ -15,5 +15,9 @@ module.exports = {
     skype: 'dr.chip.skm',
     github: 'https://github.com/sureshHARDIYA',
     website: 'http://www.skmukhiya.com.np'
-  }
+  },
+  social: [
+    {facebook: 'http://www.facebook.com/jagapati'},
+    {twitter: 'http://www.twitter.com/dr_code_skm'}
+  ]
 };
