@@ -1,15 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter } from 'react-router';
 
 import './css/style.css';
-import Home from './components/Home';
+import HomeContainer from './components/HomeContainer';
 
 const Root = ({children}) => {
   return (
     <BrowserRouter>
       <div className="uk-animation-fade">
-        <Home />
+        <HomeContainer />
         {children}
       </div>
     </BrowserRouter>
