@@ -1,7 +1,8 @@
-module.exports  = {
-  1: {
+const educations  = [
+  {
     id: 1,
     year: '2004-2005',
+    header: 'Masters',
     title: 'Masters in Information System',
     university: {
       address: 'Norway, TRD',
@@ -10,9 +11,10 @@ module.exports  = {
     },
     comment: 'Here you can render <strong>HTML<strong>'
   },
-  2: {
+  {
     id: 2,
     year: '2004-2005',
+    header: 'Bachelor',
     title: 'Bachelor in Computer Science and Information Technology',
     university: {
       address: 'Kathmandu, Balkumari, Nepal',
@@ -21,9 +23,10 @@ module.exports  = {
     },
     comment: 'Here you can render <strong>HTML<strong>'
   },
-  3: {
+  {
     id: 3,
     year: '2004-2005',
+    header: 'PCL',
     title: 'Higher Secondary English Boarding School',
     university: {
       address: 'Kathmandu, Kumaripati, Nepal',
@@ -32,9 +35,10 @@ module.exports  = {
     },
     comment: 'Here you can render <strong>HTML<strong>'
   },
-  4: {
+  {
     id: 4,
     year: '2004-2005',
+    header: 'School',
     title: 'School Leaving Certificate',
     university: {
       address: 'Kathmandu, Lagankhel, Nepal',
@@ -43,4 +47,6 @@ module.exports  = {
     },
     comment: 'Here you can render <strong>HTML<strong>'
   }
-}
+]
+
+export default educations

@@ -10,14 +10,16 @@ module.exports = {
     email: 'itsmeskm99@gmail.com',
   },
   contact: {
-    email: 'itsmeskm99@gmail.com',
+    envelope: 'itsmeskm99@gmail.com',
     phone: '+47-94430044',
     skype: 'dr.chip.skm',
     github: 'https://github.com/sureshHARDIYA',
-    website: 'http://www.skmukhiya.com.np'
+    link: 'http://www.skmukhiya.com.np'
   },
-  social: [
-    {facebook: 'http://www.facebook.com/jagapati'},
-    {twitter: 'http://www.twitter.com/dr_code_skm'}
-  ]
+  social: {
+    facebook: 'http://www.facebook.com/jagapati',
+    twitter: 'http://www.twitter.com/dr_code_skm',
+    github: 'https://github.com/sureshHARDIYA',
+    link: 'http://www.skmukhiya.com.np',
+  }
 };

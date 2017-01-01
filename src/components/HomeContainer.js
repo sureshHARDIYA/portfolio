@@ -1,14 +1,10 @@
 import React from 'react'
-import { Component, PropTypes } from 'react'
+import { Component } from 'react'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
 
 class Home extends Component {
   render() {
-    const {
-        pathname,
-        children,
-      } = this.props
     return (
       <div>
         <Sidebar />
