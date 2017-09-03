@@ -7,11 +7,11 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   home: {
-    id: 'boilerplate.components.Header.home',
+    id: 'skmukhiya.components.Header.home',
     defaultMessage: 'Home',
   },
   skills: {
-    id: 'boilerplate.components.Header.skills',
+    id: 'skmukhiya.components.Header.skills',
     defaultMessage: 'Skills Set',
   },
   contact: {

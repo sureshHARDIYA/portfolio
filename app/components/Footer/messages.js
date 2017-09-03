@@ -7,11 +7,11 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   licenseMessage: {
-    id: 'boilerplate.components.Footer.license.message',
+    id: 'skmukhiya.components.Footer.license.message',
     defaultMessage: 'This is my portfolio website.',
   },
   authorMessage: {
-    id: 'boilerplate.components.Footer.author.message',
+    id: 'skmukhiya.components.Footer.author.message',
     defaultMessage: `
       Made with love by {author}.
     `,

@@ -7,7 +7,7 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   header: {
-    id: 'boilerplate.containers.Contact.header',
+    id: 'skmukhiya.containers.Contact.header',
     defaultMessage: 'Contact me',
   },
 });
