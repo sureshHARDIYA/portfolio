@@ -62,6 +62,28 @@ export default function createRoutes(store) {
       },
     },
     {
+      path: '/portfolio',
+      name: 'portfolio',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/Education/reducer'),
+          import('containers/Education/sagas'),
+          import('containers/Education'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('educations', reducer.default);
+          injectSagas(sagas.default);
+
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '/skills',
       name: 'skills',
       getComponent(nextState, cb) {

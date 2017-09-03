@@ -1,0 +1,3 @@
+export const LOAD_EDUCATIONS = 'skmukhiya/App/LOAD_EDUCATIONS';
+export const LOAD_EDUCATIONS_SUCCESS = 'skmukhiya/App/LOAD_EDUCATIONS_SUCCESS';
+export const LOAD_EDUCATIONS_FAILURE = 'skmukhiya/App/LOAD_EDUCATIONS_ERROR';

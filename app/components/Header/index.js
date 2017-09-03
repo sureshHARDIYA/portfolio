@@ -23,6 +23,9 @@ class Header extends React.Component {
           <HeaderLink to="/educations">
             <FormattedMessage {...messages.educations} />
           </HeaderLink>
+          <HeaderLink to="/portfolio">
+            <FormattedMessage {...messages.portfolio} />
+          </HeaderLink>
           <HeaderLink to="/contact">
             <FormattedMessage {...messages.contact} />
           </HeaderLink>

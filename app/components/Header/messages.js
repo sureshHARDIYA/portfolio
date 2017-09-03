@@ -22,4 +22,8 @@ export default defineMessages({
     id: 'skmukhiya.component.Header.educations',
     defaultMessage: 'Education',
   },
+  portfolio: {
+    id: 'skmukhiya.component.Header.portfolio',
+    defaultMessage: 'Portfolio',
+  },
 });
