@@ -137,6 +137,7 @@ HomePage.propTypes = {
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   loadGeneralData: PropTypes.func.isRequired,
   onChangeUsername: PropTypes.func,
+  general: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
 
 const username = 'sureshHARDIYA';

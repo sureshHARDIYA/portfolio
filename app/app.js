@@ -1,8 +1,7 @@
 /**
  * app.js
  *
- * This is the entry file for the application, only setup and boilerplate
- * code.
+ * This is the entry file for the application.
  */
 
 // Needed for redux-saga es6 generator support
@@ -50,11 +49,14 @@ import createRoutes from './routes';
 const openSansObserver = new FontFaceObserver('Open Sans', {});
 
 // When Open Sans is loaded, add a font-family using Open Sans to the body
-openSansObserver.load().then(() => {
-  document.body.classList.add('fontLoaded');
-}, () => {
-  document.body.classList.remove('fontLoaded');
-});
+openSansObserver.load().then(
+  () => {
+    document.body.classList.add('fontLoaded');
+  },
+  () => {
+    document.body.classList.remove('fontLoaded');
+  }
+);
 
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
@@ -83,11 +85,9 @@ const render = (messages) => {
         <Router
           history={history}
           routes={rootRoute}
-          render={
-            // Scroll to top when going to a new page, imitating default browser
-            // behaviour
-            applyRouterMiddleware(useScroll())
-          }
+          render={// Scroll to top when going to a new page, imitating default browser
+          // behaviour
+          applyRouterMiddleware(useScroll())}
         />
       </LanguageProvider>
     </Provider>,
@@ -106,14 +106,16 @@ if (module.hot) {
 
 // Chunked polyfill for browsers without Intl support
 if (!window.Intl) {
-  (new Promise((resolve) => {
+  new Promise((resolve) => {
     resolve(import('intl'));
-  }))
-    .then(() => Promise.all([
-      import('intl/locale-data/jsonp/en.js'),
-      import('intl/locale-data/jsonp/de.js'),
-      import('intl/locale-data/jsonp/ne.js'),
-    ]))
+  })
+    .then(() =>
+      Promise.all([
+        import('intl/locale-data/jsonp/en.js'),
+        import('intl/locale-data/jsonp/de.js'),
+        import('intl/locale-data/jsonp/ne.js'),
+      ])
+    )
     .then(() => render(translationMessages))
     .catch((err) => {
       throw err;

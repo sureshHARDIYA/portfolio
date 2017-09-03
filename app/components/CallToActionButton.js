@@ -1,6 +1,7 @@
+import { Link } from 'react-router';
 import styled from 'styled-components';
 
-const CallToActionButton = styled.button`
+const CallToActionButton = styled(Link)`
   border: none;
   font-family: inherit;
   font-size: inherit;
@@ -16,6 +17,7 @@ const CallToActionButton = styled.button`
   outline: none;
   position: relative;
   transition: all 0.3s;
+  text-decoration: none;
 
   &:after {
     content: '';

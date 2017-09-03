@@ -9,6 +9,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -16,7 +17,9 @@ import withProgressBar from 'components/ProgressBar';
 import ContainerWrapper from 'components/ContainerWrapper';
 import CallToActionButton from 'components/CallToActionButton';
 import Content from './Content';
+import H2 from './H2';
 import CallToAction from './CallToAction';
+import messages from './messages';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -41,8 +44,12 @@ export function App(props) {
       </Content>
       <CallToAction>
         <ContainerWrapper>
-          <h2>I like to say hello to everyone.</h2>
-          <CallToActionButton>Contact Me</CallToActionButton>
+          <H2>
+            <FormattedMessage {...messages.callToActionMessage} />
+          </H2>
+          <CallToActionButton to="/contact">
+            <FormattedMessage {...messages.CallToActionButton} />
+          </CallToActionButton>
         </ContainerWrapper>
       </CallToAction>
       <Footer />
