@@ -1,0 +1,77 @@
+{
+  "about": {
+    "country": "Nepal",
+    "Religion": "Hindu",
+    "email": "itesmeskm99@gmail.com",
+    "mobile": "+9779818569582",
+    "address": {
+      "country": "Nepal",
+      "region": "Eastern Development Region",
+      "zone": "Bagmati",
+      "district": "Lalitpur",
+      "tole": "Dhapakhel",
+      "wada_no": 23,
+      "lattidue": "333.333",
+      "longitude": "333434"
+    }
+  },
+  "languages": [
+    {
+      "id": 1,
+      "name": "Maithali",
+      "level": "Expert",
+      "comment": "Mothertongue"
+    },
+    {
+      "id": 2,
+      "name": "Nepali",
+      "level": "National Language",
+      "comment": "Good Communication, and Written Skills"
+    },
+    {
+      "id": 3,
+      "name": "English",
+      "level": "Expert",
+      "comment": "Good Communication, and Written Skills"
+    },
+    {
+      "id": 4,
+      "name": "Hindi",
+      "level": "Intermediate",
+      "comment": "Good Communication skills"
+    },
+    {
+      "id": 5,
+      "name": "Norwegian",
+      "level": "Basic",
+      "comment": "Basic Words and Phrases only"
+    }
+  ],
+  "references": {
+    "github": "https://github.com/sureshHARDIYA",
+    "upwork": "https://www.upwork.com/users/ 0182e0779315e50896",
+    "linkedin": "http://www.linkedin.com/pub/suresh-kumar-mukhiya/35/82a/651",
+    "personal": "www.skmukhiya.com.np",
+    "wordpressPlugin": "https://profiles.wordpress.org/sureshhardiya/#content-plugins"
+  },
+  "interests": [
+    "Blogging",
+    "Programming",
+    "Hiking",
+    "Writing",
+    "Photography",
+    "Movie Making"
+  ],
+  "awards": [
+    {
+      "id": 1,
+      "year": "2014-2016",
+      "title": "Quota Scholarship by Norwegian Lãěnekassen"
+    },
+    {
+      "id": 2,
+      "year": "2013",
+      "title": "Awarded Nepal Board Topper, TU, Vice Chancellor Award"
+    }
+  ]
+}

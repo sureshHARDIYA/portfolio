@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "year": "2014–2016",
+    "school": "Norwegian University of Science and Technology",
+    "address": "Norway",
+    "course": "Masters In Information System",
+    "degree": "Masters",
+    "grade": "B"
+  },
+  {
+    "id": 2,
+    "year": "2008–2013",
+    "school": "Kathford International College of Eng. and Mgmt.",
+    "address": "Nepal, Kathmandu Valley",
+    "course": "Bachelor In Computer Science and Information Technology,",
+    "degree": "Bachelors",
+    "grade": "91.6%."
+  },
+  {
+    "id": 3,
+    "year": "2005–2007",
+    "school": "Higher Secondary Education Board (HSEB)",
+    "address": "Nepal, Kathmandu Valley",
+    "course": "Masters in Information System",
+    "degree": "PCL",
+    "grade": "83.5%"
+  },
+  {
+    "id": 4,
+    "year": "2003–2004",
+    "school": "Lalitpur Secondary English Boarding School",
+    "address": "Nepal, Kathmandu Valley",
+    "course": "School Leaving Certificate (SLC)",
+    "degree": "SLC",
+    "grade": "84.24%"
+  }
+]
