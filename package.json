@@ -223,7 +223,7 @@
     "minimist": "1.2.0",
     "node-upwork": "^0.0.7",
     "react": "15.4.1",
-    "react-burger-menu": "^2.1.4",
+    "react-burger-menu": "2.1.5",
     "react-dom": "15.4.1",
     "react-helmet": "3.2.2",
     "react-intl": "2.1.5",

@@ -6236,9 +6236,9 @@ react-addons-test-utils@15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.4.1.tgz#1e4caab151bf27cce26df5f9cb714f4fd8359ae1"
 
-react-burger-menu@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.1.4.tgz#7a7d31c96c32c0c329d0bd5bbd78a844662708dd"
+react-burger-menu@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-burger-menu/-/react-burger-menu-2.1.5.tgz#55a3f554c27144ad4263998692905f7b27516130"
   dependencies:
     browserify-optional "^1.0.0"
     classnames "^2.1.1"
