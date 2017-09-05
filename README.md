@@ -1,5 +1,5 @@
 # Portfolio (in progress)
-This is still in development. This is my personal project developed to make easy portfolio site with `react`, `uikit` and other dependencies. The related dependencies will be cited once the development is completed. 
+This is still in development. This is my personal project developed to make easy portfolio site with `reactjs`, `redux`, `redux-saga`, `react-intl`, `styled-component` and other dependencies. The related dependencies will be cited once the development is completed. 
 
 # Demo ( In Progress)
 Will be deploying to heroku Soon
