@@ -51,16 +51,19 @@ class Header extends React.Component {
       <div>
         <Menu styles={styles}>
           <A id="home" className="menu-item" href="/">
-            Home
+            <FormattedMessage {...messages.home} />
           </A>
-          <A id="about" className="menu-item" href="/about">
-            About
+          <A id="skills" className="menu-item" href="/skills">
+            <FormattedMessage {...messages.skills} />
           </A>
-          <A id="contact" className="menu-item" href="/contact">
-            Contact
+          <A id="educations" className="menu-item" href="/educations">
+            <FormattedMessage {...messages.educations} />
           </A>
-          <A className="menu-item--small" href="">
-            Settings
+          <A className="menu-item--small" href="/portfolio">
+            <FormattedMessage {...messages.portfolio} />
+          </A>
+          <A className="menu-item--small" href="/contact">
+            <FormattedMessage {...messages.contact} />
           </A>
         </Menu>
         <Img src={Banner} alt="react-boilerplate - Logo" />
