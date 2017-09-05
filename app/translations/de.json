@@ -24,6 +24,8 @@
   "skmukhiya.containers.FeaturePage.scaffolding.message": "Automatisieren Sie die Kreation von Komponenten, Containern, Routen, Selektoren und Sagas – und ihre Tests – direkt von dem Terminal!",
   "skmukhiya.containers.FeaturePage.state_management.header": "Berechenbare Stateverwaltung",
   "skmukhiya.containers.FeaturePage.state_management.message": "Unidirectional data flow erlaubt uns alle Änderungen ihrer Applikation zu loggen und time travel debugging einzusetzen.",
+  "skmukhiya.containers.HomePage.CallToActionButton": "",
+  "skmukhiya.containers.HomePage.callToActionMessage": "",
   "skmukhiya.containers.HomePage.show_testimonial": "",
   "skmukhiya.containers.HomePage.start_project.header": "Beginnen Sie Ihr nächstes React Projekt in Sekunden",
   "skmukhiya.containers.HomePage.start_project.message": "Ein skalierendes, offline-first Fundament mit der besten DX und einem Fokus auf Performance und bewährte Methoden",

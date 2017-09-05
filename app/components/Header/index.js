@@ -2,12 +2,19 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { slide as Menu } from 'react-burger-menu';
 
+import Home from 'components/Icons/Home';
+import Education from 'components/Icons/Education';
+import Skills from 'components/Icons/Skills';
+import Portfolio from 'components/Icons/Portfolio';
+import Contact from 'components/Icons/Contact';
+
 import Img from './Img';
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 import Banner from './banner.jpg';
 import messages from './messages';
 import A from './A';
+import MenuNameWrapper from './MenuNameWrapper';
 
 const styles = {
   bmBurgerButton: {
@@ -50,20 +57,35 @@ class Header extends React.Component {
     return (
       <div>
         <Menu styles={styles}>
-          <A id="home" className="menu-item" href="/">
-            <FormattedMessage {...messages.home} />
+          <A href="/">
+            <Home />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.home} />
+            </MenuNameWrapper>
           </A>
-          <A id="skills" className="menu-item" href="/skills">
-            <FormattedMessage {...messages.skills} />
+          <A href="/skills">
+            <Skills />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.skills} />
+            </MenuNameWrapper>
           </A>
-          <A id="educations" className="menu-item" href="/educations">
-            <FormattedMessage {...messages.educations} />
+          <A href="/educations">
+            <Education />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.educations} />
+            </MenuNameWrapper>
           </A>
-          <A className="menu-item--small" href="/portfolio">
-            <FormattedMessage {...messages.portfolio} />
+          <A href="/portfolio">
+            <Portfolio />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.portfolio} />
+            </MenuNameWrapper>
           </A>
-          <A className="menu-item--small" href="/contact">
-            <FormattedMessage {...messages.contact} />
+          <A href="/contact">
+            <Contact />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.contact} />
+            </MenuNameWrapper>
           </A>
         </Menu>
         <Img src={Banner} alt="react-boilerplate - Logo" />
