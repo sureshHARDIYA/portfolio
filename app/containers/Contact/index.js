@@ -37,8 +37,7 @@ class FeaturePage extends React.Component {
     this.setState({ [inputName]: e.target.value });
 
   render() {
-
-    const {name, email , tel } = this.state
+    const { name, email, tel } = this.state;
     return (
       <div>
         <Helmet
@@ -81,8 +80,9 @@ class FeaturePage extends React.Component {
               <FormGroup>
                 <TextArea
                   placeholder="Send A message"
+                  onChange={(e) => this.onInputChange(e, 'message')}
                   autoCorrect
-                ></TextArea>
+                >{this.state.message}</TextArea>
               </FormGroup>
               <FormGroup>
                 <Button type="submit">Submit</Button>
