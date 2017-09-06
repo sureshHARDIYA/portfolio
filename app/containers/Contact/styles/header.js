@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import colors from '../../../styles/colors';
 
-
 const Header = styled.h1`
   position: relative;
   margin: 10px 0px;
-  padding: 0;
+  padding: 0; 
   color: ${colors.lightblue};
   text-align: center;
   font-size: 1.4em;

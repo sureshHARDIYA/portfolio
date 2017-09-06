@@ -1,6 +1,4 @@
-// move these where you please later
 import styled from 'styled-components';
-
 
 export const Wrapper = styled.div`
   width: 50%;
