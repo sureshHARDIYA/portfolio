@@ -13,7 +13,7 @@ const InputField = (props) => {
         placeholder={placeholder}
         autoComplete={type}
         autoCorrect={false}
-        vale={value}
+        value={value}
         onChange={(e) => onInputChange(e, name)}
         required
       />

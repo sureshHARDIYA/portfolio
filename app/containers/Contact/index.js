@@ -15,7 +15,6 @@ import Button from './styles/button';
 
 class FeaturePage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
-
   state = {
     name: '',
     email: '',
@@ -31,6 +30,7 @@ class FeaturePage extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
+    // todo validation check
   };
 
   onInputChange = (e, inputName) =>
