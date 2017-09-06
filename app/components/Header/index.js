@@ -7,14 +7,14 @@ import Education from 'components/Icons/Education';
 import Skills from 'components/Icons/Skills';
 import Portfolio from 'components/Icons/Portfolio';
 import Contact from 'components/Icons/Contact';
+import LocaleToggle from 'containers/LocaleToggle';
 
-import Img from './Img';
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
 import messages from './messages';
 import A from './A';
 import MenuNameWrapper from './MenuNameWrapper';
+import Hero from './Hero';
 
 const styles = {
   bmBurgerButton: {
@@ -25,7 +25,7 @@ const styles = {
     top: '36px',
   },
   bmBurgerBars: {
-    background: '#373a47',
+    background: '#fff',
   },
   bmCrossButton: {
     height: '24px',
@@ -35,7 +35,7 @@ const styles = {
     background: '#bdc3c7',
   },
   bmMenu: {
-    background: 'rgb(6, 136, 43)',
+    background: '#008329',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
   },
@@ -88,24 +88,42 @@ class Header extends React.Component {
             </MenuNameWrapper>
           </A>
         </Menu>
-        <Img src={Banner} alt="react-boilerplate - Logo" />
         <NavBar>
           <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
+            <Home />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.home} />
+            </MenuNameWrapper>
           </HeaderLink>
           <HeaderLink to="/skills">
-            <FormattedMessage {...messages.skills} />
+            <Skills />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.skills} />
+            </MenuNameWrapper>
           </HeaderLink>
           <HeaderLink to="/educations">
-            <FormattedMessage {...messages.educations} />
+            <Education />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.educations} />
+            </MenuNameWrapper>
           </HeaderLink>
           <HeaderLink to="/portfolio">
-            <FormattedMessage {...messages.portfolio} />
+            <Portfolio />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.portfolio} />
+            </MenuNameWrapper>
           </HeaderLink>
           <HeaderLink to="/contact">
-            <FormattedMessage {...messages.contact} />
+            <Contact />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.contact} />
+            </MenuNameWrapper>
+          </HeaderLink>
+          <HeaderLink to="/">
+            <LocaleToggle />
           </HeaderLink>
         </NavBar>
+        <Hero />
       </div>
     );
   }
