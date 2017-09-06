@@ -82,7 +82,7 @@ export class HomePage extends React.PureComponent {
                 general.awards.map((item, index) =>
                   <li key={index}>
                     {item.id} -
-                    {item.year} -
+                    {item.year}
                     {item.title} -
                   </li>
                 )}
