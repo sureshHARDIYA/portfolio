@@ -1,10 +1,4 @@
-/*
- *
- * LanguageToggle
- *
- */
-
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
@@ -15,11 +9,17 @@ import { appLocales } from '../../i18n';
 import { changeLocale } from '../LanguageProvider/actions';
 import { makeSelectLocale } from '../LanguageProvider/selectors';
 
-export class LocaleToggle extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+// eslint-disable-next-line react/prefer-stateless-function
+export class LocaleToggle extends PureComponent {
   render() {
     return (
       <Wrapper>
-        <Toggle value={this.props.locale} values={appLocales} messages={messages} onToggle={this.props.onLocaleToggle} />
+        <Toggle
+          value={this.props.locale}
+          values={appLocales}
+          messages={messages}
+          onToggle={this.props.onLocaleToggle}
+        />
       </Wrapper>
     );
   }
@@ -30,10 +30,9 @@ LocaleToggle.propTypes = {
   locale: React.PropTypes.string,
 };
 
-const mapStateToProps = createSelector(
-  makeSelectLocale(),
-  (locale) => ({ locale })
-);
+const mapStateToProps = createSelector(makeSelectLocale(), (locale) => ({
+  locale,
+}));
 
 export function mapDispatchToProps(dispatch) {
   return {

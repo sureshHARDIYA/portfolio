@@ -40,6 +40,10 @@ const NameCard = styled.h1`
   color: white;
   font-size: 11vh;
   font-weight: 800;
+
+  @media (max-width: 700px) {
+    padding-top: 11vh;
+  }
 `;
 
 const HeaderInner = styled.div`
@@ -127,14 +131,27 @@ class Hero extends Component {
           />
         </svg>
         <HeaderInner>
-          <NameCard>S.K. Mukhiya</NameCard>
+          <NameCard>
+            <FormattedMessage {...messages.HeaderInnerNameCard} />
+          </NameCard>
           <DescriptionCard>
             <TextLoop>
-              <span> First item </span>
-              <Link to="/">Second item </Link>
-              <div> Third item </div>
-            </TextLoop>{' '}
-            and something else.
+              <span>
+                <FormattedMessage
+                  {...messages.HeaderInnerDescriptionDeveloperText}
+                />
+              </span>
+              <span>
+                <FormattedMessage
+                  {...messages.HeaderInnerDescriptionCodeText}
+                />
+              </span>
+              <span>
+                <FormattedMessage
+                  {...messages.HeaderInnerDescriptionPizzaText}
+                />
+              </span>
+            </TextLoop>
           </DescriptionCard>
           <ButtonGroup>
             <CallToActionButton medium to="/contact">
