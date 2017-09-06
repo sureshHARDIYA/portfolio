@@ -78,7 +78,7 @@ const routeGen = plop.getGenerator('route');
 ContainerComponent
   .then(() => routeGen.runActions({ component: 'RbGeneratedContainerComponent', path: '/generated-route-container' })
     .then(checkForErrors)
-    .catch(reportErrorsFor('route/Container'))
+    .catch(reportErrorsFor('route/FormGroup'))
 );
 
 ComponentEsclass
