@@ -8,4 +8,8 @@ export default styled.div`
   top: 15px;
   right: 10px;
   z-index: 99999;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
