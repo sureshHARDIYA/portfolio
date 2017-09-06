@@ -11,7 +11,7 @@ export default defineMessages({
     defaultMessage: 'I like to say hello to everyone.',
   },
   CallToActionButton: {
-    id: 'skmukhiya.containers.HomePage.callToActionMessage',
+    id: 'skmukhiya.containers.HomePage.CallToActionButton',
     defaultMessage: 'Contact Me',
   },
 });

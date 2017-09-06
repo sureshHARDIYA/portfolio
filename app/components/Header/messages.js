@@ -26,4 +26,12 @@ export default defineMessages({
     id: 'skmukhiya.component.Header.portfolio',
     defaultMessage: 'Portfolio',
   },
+  CallToActionButtonHeader: {
+    id: 'skmukhiya.containers.HomePage.CallToActionButtonHeader',
+    defaultMessage: 'Contact',
+  },
+  CallToActionButtonHire: {
+    id: 'skmukhiya.containers.HomePage.CallToActionButtonHire',
+    defaultMessage: 'Hire Me',
+  },
 });

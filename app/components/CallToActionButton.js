@@ -6,11 +6,10 @@ const CallToActionButton = styled(Link)`
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  background: none;
+  background: ${(props) => (props.background ? props.background : 'none')};
   cursor: pointer;
-  padding: 25px 80px;
+  padding: ${(props) => (props.medium ? '8px 50px' : '25px 80px')};
   display: inline-block;
-  margin: 15px 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -18,6 +17,8 @@ const CallToActionButton = styled(Link)`
   position: relative;
   transition: all 0.3s;
   text-decoration: none;
+  border: 3px solid #fff;
+  color: ${(props) => (props.background ? '#5cbb2f' : '#fff')};
 
   &:after {
     content: '';
@@ -26,12 +27,10 @@ const CallToActionButton = styled(Link)`
     transition: all 0.3s;
   }
 
-  border: 3px solid #fff;
-  color: #fff;
 
   &:hover {
-    color: #0e83cd;
-    background: #fff;
+    color: #5cbb2f;
+    background: ${(props) => (props.background ? '#f4f8f1' : '#fff')};
   }
 
   &:active {

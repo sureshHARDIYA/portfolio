@@ -232,6 +232,7 @@
     "react-router-redux": "4.0.6",
     "react-router-scroll": "0.4.1",
     "react-scroll": "1.5.4",
+    "react-text-loop": "1.1.0",
     "redux": "3.6.0",
     "redux-immutable": "3.0.8",
     "redux-saga": "0.14.0",

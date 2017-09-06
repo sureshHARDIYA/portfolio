@@ -1,9 +1,3 @@
-/*
- * HomePage
- *
- * This is the first thing users see of our App, at the '/' route
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -11,22 +5,13 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import {
-  makeSelectRepos,
-  makeSelectLoading,
-  makeSelectError,
-  makeSelectGeneralData,
-} from 'containers/App/selectors';
+import { makeSelectGeneralData } from 'containers/App/selectors';
 import H2 from 'components/H2';
-import ReposList from 'components/ReposList';
-import Button from 'components/Button';
 
 import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
-import { loadRepos, loadGeneralData } from '../App/actions';
-import { changeUsername } from './actions';
-import { makeSelectUsername } from './selectors';
+import { loadGeneralData } from '../App/actions';
 
 export class HomePage extends React.PureComponent {
   componentWillMount() {
@@ -34,12 +19,7 @@ export class HomePage extends React.PureComponent {
   }
 
   render() {
-    const { loading, error, repos, general } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos,
-    };
+    const { general } = this.props;
 
     return (
       <article>
@@ -61,15 +41,6 @@ export class HomePage extends React.PureComponent {
               <FormattedMessage {...messages.startProjectMessage} />
             </p>
           </CenteredSection>
-          <Section>
-            <H2>
-              <FormattedMessage {...messages.trymeHeader} />
-            </H2>
-            <Button onClick={this.props.onChangeUsername}>
-              <FormattedMessage {...messages.trymeMessage} />
-            </Button>
-            <ReposList {...reposListProps} />
-          </Section>
           <Section>
             <H2>Languages</H2>
             <div>References</div>
@@ -132,31 +103,16 @@ export class HomePage extends React.PureComponent {
 }
 
 HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   loadGeneralData: PropTypes.func.isRequired,
-  onChangeUsername: PropTypes.func,
   general: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
 
-const username = 'sureshHARDIYA';
-
 export const mapDispatchToProps = (dispatch) => ({
-  onChangeUsername: () => {
-    dispatch(changeUsername(username));
-    dispatch(loadRepos());
-  },
   loadGeneralData: () => dispatch(loadGeneralData()),
 });
 
 const mapStateToProps = createStructuredSelector({
-  repos: makeSelectRepos(),
-  username: makeSelectUsername(),
-  loading: makeSelectLoading(),
-  error: makeSelectError(),
   general: makeSelectGeneralData(),
 });
 
-// Wrap the component to inject dispatch and state into it
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

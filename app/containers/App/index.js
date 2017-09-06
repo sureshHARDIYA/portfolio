@@ -29,6 +29,11 @@ const AppWrapper = styled.div`
   flex-direction: column;
 `;
 
+const ContentContainerWrapper = styled.div`
+  width: 80%;
+  margin: 1rem auto;
+`;
+
 export function App(props) {
   return (
     <AppWrapper>
@@ -39,7 +44,9 @@ export function App(props) {
       />
       <Header />
       <Content>
-        {React.Children.toArray(props.children)}
+        <ContentContainerWrapper>
+          {React.Children.toArray(props.children)}
+        </ContentContainerWrapper>
       </Content>
       <CallToAction>
         <ContainerWrapper>
