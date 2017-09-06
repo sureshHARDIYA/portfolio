@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 `;
 
+// noinspection InconsistentLineSeparators
 export const FormGroup = styled.div` 
   width: 100%;
   padding: .2em;

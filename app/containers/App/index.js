@@ -10,7 +10,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -64,7 +64,7 @@ export function App(props) {
 }
 
 App.propTypes = {
-  children: PropType.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default withProgressBar(App);
