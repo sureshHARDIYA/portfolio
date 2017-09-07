@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { makeSelectError } from 'containers/App/selectors';
+import PageContainer from 'components/PageContainer';
 import H2 from 'components/H2';
 import { makeSelectEducation } from './selectors';
 import { loadEducations } from './actions';
@@ -34,21 +35,18 @@ export class Education extends React.PureComponent {
             },
           ]}
         />
-        <div>
-          <div>
-            <H2>Education</H2>
-            <div>Loading Education</div>
-            <ul>
-              {educations &&
-                educations.map((item) =>
-                  <li key={item.id}>
-                    {item.year} - {item.school} - {item.grade} - {item.address}{' '}
-                    - {item.course}
-                  </li>
-                )}
-            </ul>
-          </div>
-        </div>
+        <PageContainer>
+          <H2>Education</H2>
+          <ul>
+            {educations &&
+              educations.map((item) =>
+                <li key={item.id}>
+                  {item.year} - {item.school} - {item.grade} - {item.address} -{' '}
+                  {item.course}
+                </li>
+              )}
+          </ul>
+        </PageContainer>
       </article>
     );
   }
