@@ -7,11 +7,18 @@ import { createStructuredSelector } from 'reselect';
 
 import { makeSelectGeneralData } from 'containers/App/selectors';
 import H2 from 'components/H2';
+import withProgressBar from 'components/ProgressBar';
 
 import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
 import { loadGeneralData } from '../App/actions';
+
+function Component() {
+  return <div />;
+}
+
+const HocComponent = withProgressBar(Component);
 
 export class HomePage extends React.PureComponent {
   componentWillMount() {
@@ -41,9 +48,8 @@ export class HomePage extends React.PureComponent {
               <FormattedMessage {...messages.startProjectMessage} />
             </p>
           </CenteredSection>
-          <Section>
+          <Section background="#f9f9f9">
             <H2>Languages</H2>
-            <div>References</div>
             <ul>
               {general.languages &&
                 general.languages.map((item, index) =>
@@ -60,7 +66,6 @@ export class HomePage extends React.PureComponent {
             <H2>
               <FormattedMessage {...messages.show_testimonial} />
             </H2>
-            <div>References</div>
             <ul>
               {general.references &&
                 Object.keys(general.references).map((item, index) =>
@@ -70,15 +75,14 @@ export class HomePage extends React.PureComponent {
                 )}
             </ul>
           </Section>
-          <Section>
+          <Section background="#f9f9f9">
             <H2>Awards</H2>
-            <div>Awards</div>
             <ul>
               {general.awards &&
                 general.awards.map((item, index) =>
                   <li key={index}>
                     {item.id} -
-                    {item.year} -
+                    {item.year}
                     {item.title} -
                   </li>
                 )}
@@ -86,7 +90,6 @@ export class HomePage extends React.PureComponent {
           </Section>
           <Section>
             <H2>Hobbies</H2>
-            <div>Hobbies</div>
             <ul>
               {general.interests &&
                 general.interests.map((item, index) =>
@@ -95,6 +98,7 @@ export class HomePage extends React.PureComponent {
                   </li>
                 )}
             </ul>
+            <HocComponent />
           </Section>
         </div>
       </article>

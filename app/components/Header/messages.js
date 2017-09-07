@@ -34,4 +34,20 @@ export default defineMessages({
     id: 'skmukhiya.containers.HomePage.CallToActionButtonHire',
     defaultMessage: 'Hire Me',
   },
+  HeaderInnerNameCard: {
+    id: 'skmukhiya.containers.HomePage.HeaderInnerNameCardText',
+    defaultMessage: 'S.K. Mukhiya',
+  },
+  HeaderInnerDescriptionDeveloperText: {
+    id: 'skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText',
+    defaultMessage: 'I am Frontend Developer.',
+  },
+  HeaderInnerDescriptionCodeText: {
+    id: 'skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText',
+    defaultMessage: 'I like to code.',
+  },
+  HeaderInnerDescriptionPizzaText: {
+    id: 'skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText',
+    defaultMessage: 'I like Pizza and Coffee.',
+  },
 });
