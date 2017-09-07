@@ -6,5 +6,7 @@ const colors = {
   dodgerBlue: '#19B5FE',
   borderColor: '#dbe2e8',
   radicalRed: '#F62459',
+  brandGreen: '#5bbc2e',
+  white: '#ffffff',
 };
 export default Object.freeze(colors);
