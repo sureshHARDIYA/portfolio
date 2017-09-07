@@ -1,4 +1,4 @@
-/* eslint-disable no-trailing-spaces,react/sort-comp,one-var,arrow-body-style,no-restricted-syntax,no-return-assign,no-param-reassign */
+/* eslint-disable no-trailing-spaces,react/sort-comp,one-var,arrow-body-style,no-restricted-syntax,no-return-assign,no-param-reassign,no-unused-expressions */
 
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -20,14 +20,16 @@ class FeaturePage extends React.Component {
     message: '',
     status: null,
   }
+  delayStatusReset = () => setTimeout(() => this.setState({ status: null }), 3000)
 
   resetState = () => {
-    const state = { ...this.state };
-
-    return this.setState(Object.keys(state)
-                               .reduce((cur, prev) => {
-                                 return cur[prev] = '';
-                               }, {}));
+    const state = Object.assign({}, this.state);
+    const reset = Object.keys(state).reduce((cur, prev) => {
+      prev === 'status' ? cur[prev] = this.state.status : cur[prev] = '';
+      return cur;
+    }, {});
+    this.setState(reset);
+    return this.delayStatusReset();
   }
 
   onInputChange = (e, inputName) =>
@@ -35,7 +37,7 @@ class FeaturePage extends React.Component {
 
   sendEmail = ({ name, tel, email, message }) => {
     axios.post('http://formspree.io/gregjarvez@gmail.com', {
-      header: { 'content-type': 'text/html' },
+      header: { 'content-type': 'application/html' },
       data: {
         message: {
           name,
