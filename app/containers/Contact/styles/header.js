@@ -4,13 +4,14 @@ import colors from '../../../styles/colors';
 const Header = styled.h1`
   position: relative;
   margin: 10px 0px;
-  padding: 0; 
-  color: ${colors.lightblue};
+  padding: 0;
+  color: ${colors.brandGreen};
   text-align: center;
   font-size: 1.4em;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  
+  margin-top: 2rem;
+
   &:after {
     content: '';
     display: inline-block;
@@ -20,13 +21,12 @@ const Header = styled.h1`
     bottom: -10px;
     left: 50%;
     transform: translate(-50%);
-    background: ${colors.lightblue};
+    background: ${colors.brandGreen};
   }
-  
+
   @media screen and (min-width: 320px) {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
-  
 `;
 
 export default Header;

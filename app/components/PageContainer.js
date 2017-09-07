@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  width: 80%;
+const PageContainer = styled.div`
+  width: 90%;
+  padding: 2rem;
   height: auto;
   position: relative;
   border: 1px solid transparent;
@@ -14,9 +15,4 @@ export const Wrapper = styled.div`
   }
 `;
 
-// noinspection InconsistentLineSeparators
-export const FormGroup = styled.div`
-  width: 100%;
-  padding: .2em;
-  margin-top: .5em;
-`;
+export default PageContainer;
