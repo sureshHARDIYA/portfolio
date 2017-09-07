@@ -38,7 +38,7 @@ class FeaturePage extends React.Component {
 
   sendEmail = ({ name, tel, email, message }) => {
     axios
-      .post('http://formspree.io/gregjarvez@gmail.com', {
+      .post('http://formspree.io/itsmeskm99@gmail.com', {
         header: { 'content-type': 'application/html' },
         data: {
           message: {
