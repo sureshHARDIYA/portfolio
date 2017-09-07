@@ -19,35 +19,38 @@ class FeaturePage extends React.Component {
     tel: '',
     message: '',
     status: null,
-  }
-  delayStatusReset = () => setTimeout(() => this.setState({ status: null }), 3000)
+  };
+  delayStatusReset = () =>
+    setTimeout(() => this.setState({ status: null }), 3000);
 
   resetState = () => {
     const state = Object.assign({}, this.state);
     const reset = Object.keys(state).reduce((cur, prev) => {
-      prev === 'status' ? cur[prev] = this.state.status : cur[prev] = '';
+      prev === 'status' ? (cur[prev] = this.state.status) : (cur[prev] = '');
       return cur;
     }, {});
     this.setState(reset);
     return this.delayStatusReset();
-  }
+  };
 
   onInputChange = (e, inputName) =>
     this.setState({ [inputName]: e.target.value });
 
   sendEmail = ({ name, tel, email, message }) => {
-    axios.post('http://formspree.io/gregjarvez@gmail.com', {
-      header: { 'content-type': 'application/html' },
-      data: {
-        message: {
-          name,
-          tel,
-          email,
-          message,
+    axios
+      .post('http://formspree.io/gregjarvez@gmail.com', {
+        header: { 'content-type': 'application/html' },
+        data: {
+          message: {
+            name,
+            tel,
+            email,
+            message,
+          },
         },
-      },
-    }).then((response) => this.setState({ status: response.status }));
-  }
+      })
+      .then((response) => this.setState({ status: response.status }));
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -64,7 +67,6 @@ class FeaturePage extends React.Component {
 
   render() {
     const { name, email, tel } = this.state;
-    console.log(this.state);
     return (
       <div>
         <Helmet
@@ -112,7 +114,9 @@ class FeaturePage extends React.Component {
                   onChange={(e) => this.onInputChange(e, 'message')}
                   autoCorrect
                   value={this.state.message}
-                >{ this.state.message }</TextArea>
+                >
+                  {this.state.message}
+                </TextArea>
               </FormGroup>
               <FormGroup>
                 <Button type="submit">Submit ➣</Button>
@@ -121,12 +125,10 @@ class FeaturePage extends React.Component {
             </form>
           </FormGroup>
           <FormGroup>
-            {
-              this.state.status === 200 &&
+            {this.state.status === 200 &&
               <Notifier status={this.state.status}>
                 Thank you! I will speak to you soon 😉
-              </Notifier>
-            }
+              </Notifier>}
           </FormGroup>
         </Wrapper>
       </div>
