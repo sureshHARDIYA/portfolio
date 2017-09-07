@@ -1,4 +1,4 @@
-/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-trailing-spaces,react/sort-comp */
 /*
  * FeaturePage
  *
@@ -6,12 +6,13 @@
  */
 import React from 'react';
 import Helmet from 'react-helmet';
+import axios from 'axios';
 import Header from './styles/header';
 import { Wrapper, FormGroup } from './styles/wrappers';
 import InputField from './Inputs';
 import TextArea from './styles/textarea';
 import Button from './styles/button';
-
+import { isString, isEmail, isPhoneNumber } from './validator';
 
 class FeaturePage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -22,19 +23,34 @@ class FeaturePage extends React.Component {
     message: '',
   }
 
-  // Since state and props are static,
-  // there's no need to re-render this component
-  shouldComponentUpdate() {
-    return false;
+  onInputChange = (e, inputName) =>
+    this.setState({ [inputName]: e.target.value });
+
+  validateInputFields = ({ name, email, tel, message }) => {
+    const isNameValid = isString.test(name);
+    const isEmailValid = isEmail.test(email);
+    const isTelValid = isPhoneNumber.test(tel);
+    const isMessageValid = (typeof message === 'string' && message.trim().length !== 0);
+    return (isNameValid, isEmailValid, isMessageValid, isTelValid);
+  }
+
+  sendEmail = () => {
+c
+  }
+
+  format = () => {
+    //  format message
   }
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    // todo validation check
+    // noinspection JSDeclarationsAtScopeStart
+    const formData = Object.assign({}, { ...this.state });
+    const validated = this.validateInputFields(formData);
+    if (validated) {
+      this.sendEmail(this.format(formData));
+    }
   };
-
-  onInputChange = (e, inputName) =>
-    this.setState({ [inputName]: e.target.value });
 
   render() {
     const { name, email, tel } = this.state;
@@ -57,15 +73,16 @@ class FeaturePage extends React.Component {
                 config={{
                   name: 'name',
                   placeholder: 'Full Name',
-                  value: name,
+                  val: name,
                   onInputChange: this.onInputChange,
                 }}
               />
               <InputField
                 config={{
+                  name: '_replyto',
                   type: 'email',
                   placeholder: 'Email Address',
-                  value: email,
+                  val: email,
                   onInputChange: this.onInputChange,
                 }}
               />
@@ -73,7 +90,7 @@ class FeaturePage extends React.Component {
                 config={{
                   type: 'tel',
                   placeholder: 'Phone',
-                  value: tel,
+                  val: tel,
                   onInputChange: this.onInputChange,
                 }}
               />
@@ -87,6 +104,8 @@ class FeaturePage extends React.Component {
               <FormGroup>
                 <Button type="submit">Submit</Button>
               </FormGroup>
+              <input type="hidden" name="_subject" value="New submission! 😁" />
+              <input type="hidden" name="_next" value="//site.io/thanks.html" />
             </form>
           </FormGroup>
         </Wrapper>
