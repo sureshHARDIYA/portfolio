@@ -4,7 +4,7 @@ import { FormGroup } from './styles/wrappers';
 import Input from './styles/input';
 
 const InputField = (props) => {
-  const { type, name, placeholder, onInputChange, value } = props.config;
+  const { type, name, placeholder, onInputChange, val } = props.config;
   return (
     <FormGroup>
       <Input
@@ -13,8 +13,8 @@ const InputField = (props) => {
         placeholder={placeholder}
         autoComplete={type}
         autoCorrect={false}
-        value={value}
-        onChange={(e) => onInputChange(e, name)}
+        value={val}
+        onChange={(e) => onInputChange(e, type || name)}
         required
       />
     </FormGroup>
@@ -23,10 +23,11 @@ const InputField = (props) => {
 
 
 InputField.propTypes = {
-  config: PropTypes.objectOf({
+  config: PropTypes.shape({
     type: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
+    val: PropTypes.string,
     onInputChange: PropTypes.func,
   }).isRequired,
 };
