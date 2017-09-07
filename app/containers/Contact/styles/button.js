@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import colors from '../../../styles/colors';
 
 const Button = styled.button`
-   width: 200px;
-   height: 50px;
+   height: 44px;
+   padding: .7rem 1.4rem ;
    display: block;
-   margin: 20px auto;
-   background: ${colors.nativeBlue};
+   margin: 1.1rem auto;
+   background: #fff;
+   border: 1px solid ${colors.nativeBlue};
    border-radius: 5px;
    cursor: pointer;
-   color: #FFF;
+   color: ${colors.nativeBlue};
+   text-align: center;
    transition: .4s ease-in-out;
    
-   
-   &:hover {
-    box-shadow:  0 2px 2px 0 rgba(46,60,73,.05);
-    background: ${colors.dodgerBlue};
+   &:focus {
+    outline: none
    }
 `;
 

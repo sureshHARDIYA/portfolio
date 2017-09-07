@@ -1,9 +1,5 @@
-/* eslint-disable no-trailing-spaces,react/sort-comp */
-/*
- * FeaturePage
- *
- * List all the features
- */
+/* eslint-disable no-trailing-spaces,react/sort-comp,one-var,arrow-body-style,no-restricted-syntax,no-return-assign,no-param-reassign */
+
 import React from 'react';
 import Helmet from 'react-helmet';
 import axios from 'axios';
@@ -12,7 +8,8 @@ import { Wrapper, FormGroup } from './styles/wrappers';
 import InputField from './Inputs';
 import TextArea from './styles/textarea';
 import Button from './styles/button';
-import { isString, isEmail, isPhoneNumber } from './validator';
+import Notifier from './styles/notifier';
+import { validateInputFields } from './validator';
 
 class FeaturePage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -21,39 +18,51 @@ class FeaturePage extends React.Component {
     email: '',
     tel: '',
     message: '',
+    status: null,
+  }
+
+  resetState = () => {
+    const state = { ...this.state };
+
+    return this.setState(Object.keys(state)
+                               .reduce((cur, prev) => {
+                                 return cur[prev] = '';
+                               }, {}));
   }
 
   onInputChange = (e, inputName) =>
     this.setState({ [inputName]: e.target.value });
 
-  validateInputFields = ({ name, email, tel, message }) => {
-    const isNameValid = isString.test(name);
-    const isEmailValid = isEmail.test(email);
-    const isTelValid = isPhoneNumber.test(tel);
-    const isMessageValid = (typeof message === 'string' && message.trim().length !== 0);
-    return (isNameValid, isEmailValid, isMessageValid, isTelValid);
-  }
-
-  sendEmail = () => {
-c
-  }
-
-  format = () => {
-    //  format message
+  sendEmail = ({ name, tel, email, message }) => {
+    axios.post('http://formspree.io/gregjarvez@gmail.com', {
+      header: { 'content-type': 'text/html' },
+      data: {
+        message: {
+          name,
+          tel,
+          email,
+          message,
+        },
+      },
+    }).then((response) => this.setState({ status: response.status }));
   }
 
   onFormSubmit = (event) => {
     event.preventDefault();
     // noinspection JSDeclarationsAtScopeStart
     const formData = Object.assign({}, { ...this.state });
-    const validated = this.validateInputFields(formData);
-    if (validated) {
-      this.sendEmail(this.format(formData));
+    if (validateInputFields(formData)) {
+      this.sendEmail(formData);
+      this.resetState();
+      return false;
     }
+
+    return this.setState({ status: 400 });
   };
 
   render() {
     const { name, email, tel } = this.state;
+    console.log(this.state);
     return (
       <div>
         <Helmet
@@ -68,7 +77,7 @@ c
         <Wrapper>
           <Header>CONTACT ME</Header>
           <FormGroup>
-            <form action="" method="" onSubmit={this.onFormSubmit}>
+            <form onSubmit={this.onFormSubmit}>
               <InputField
                 config={{
                   name: 'name',
@@ -79,7 +88,6 @@ c
               />
               <InputField
                 config={{
-                  name: '_replyto',
                   type: 'email',
                   placeholder: 'Email Address',
                   val: email,
@@ -88,6 +96,7 @@ c
               />
               <InputField
                 config={{
+                  name: 'phone',
                   type: 'tel',
                   placeholder: 'Phone',
                   val: tel,
@@ -97,16 +106,25 @@ c
               <FormGroup>
                 <TextArea
                   placeholder="Send A message"
+                  name="message"
                   onChange={(e) => this.onInputChange(e, 'message')}
                   autoCorrect
-                >{this.state.message}</TextArea>
+                  value={this.state.message}
+                >{ this.state.message }</TextArea>
               </FormGroup>
               <FormGroup>
-                <Button type="submit">Submit</Button>
+                <Button type="submit">Submit ➣</Button>
               </FormGroup>
               <input type="hidden" name="_subject" value="New submission! 😁" />
-              <input type="hidden" name="_next" value="//site.io/thanks.html" />
             </form>
+          </FormGroup>
+          <FormGroup>
+            {
+              this.state.status === 200 &&
+              <Notifier status={this.state.status}>
+                Thank you! I will speak to you soon 😉
+              </Notifier>
+            }
           </FormGroup>
         </Wrapper>
       </div>
