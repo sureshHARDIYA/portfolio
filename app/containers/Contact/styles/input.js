@@ -22,6 +22,7 @@ const Input = styled.input`
     outline: none;
     border-color: ${colors.nativeBlue}; 
   }
+ 
 `;
 
 export default Input;

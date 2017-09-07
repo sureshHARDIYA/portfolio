@@ -22,6 +22,11 @@ const Header = styled.h1`
     transform: translate(-50%);
     background: ${colors.lightblue};
   }
+  
+  @media screen and (min-width: 320px) {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+  
 `;
 
 export default Header;
