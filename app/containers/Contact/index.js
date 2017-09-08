@@ -19,6 +19,7 @@ class FeaturePage extends React.Component {
     tel: '',
     message: '',
     status: null,
+
   }
   delayStatusReset = () => setTimeout(() => this.setState({ status: null }), 3000)
 
@@ -58,13 +59,11 @@ class FeaturePage extends React.Component {
       this.resetState();
       return false;
     }
-
     return this.setState({ status: 400 });
   };
 
   render() {
     const { name, email, tel } = this.state;
-    console.log(this.state);
     return (
       <div>
         <Helmet
