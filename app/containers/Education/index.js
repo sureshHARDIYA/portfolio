@@ -15,6 +15,8 @@ import PageContainer from 'components/PageContainer';
 import H2 from 'components/H2';
 import { makeSelectEducation } from './selectors';
 import { loadEducations } from './actions';
+import ListItemParent from './styles/listItemParent';
+import List from './listItem';
 
 export class Education extends React.PureComponent {
   componentWillMount() {
@@ -37,15 +39,12 @@ export class Education extends React.PureComponent {
         />
         <PageContainer>
           <H2>Education</H2>
-          <ul>
+          <ListItemParent>
             {educations &&
               educations.map((item) =>
-                <li key={item.id}>
-                  {item.year} - {item.school} - {item.grade} - {item.address} -{' '}
-                  {item.course}
-                </li>
+                <List key={item.id} {...item} />
               )}
-          </ul>
+          </ListItemParent>
         </PageContainer>
       </article>
     );

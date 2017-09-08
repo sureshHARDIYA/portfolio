@@ -7,6 +7,7 @@ const colors = {
   borderColor: '#dbe2e8',
   radicalRed: '#F62459',
   brandGreen: '#5bbc2e',
+  brandGreenLight: 'rgba(91, 188, 47, 0.40)',
   white: '#ffffff',
 };
 export default Object.freeze(colors);
