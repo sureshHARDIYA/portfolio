@@ -27,6 +27,11 @@ const Header = styled.h1`
   @media screen and (min-width: 320px) {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
+  
+  @media screen and (min-width: 320px) {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+  
 `;
 
 export default Header;

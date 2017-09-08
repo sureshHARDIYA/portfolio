@@ -14,6 +14,7 @@ const Input = styled.input`
   border: 1px solid ${colors.borderColor};
   font-size: 14px;
   box-shadow: 0 2px 2px 0 rgba(46,60,73,.05);
+  background: #fff !important;
   border-radius: 2px;
   color: ${colors.lightestGrey};
   transition: all .4s ease;
@@ -21,6 +22,10 @@ const Input = styled.input`
   &:focus {
     outline: none;
     border-color: ${colors.nativeBlue}; 
+  }
+  
+  &-webkit-autofill:hover {
+    background: white !important;
   }
  
 `;
