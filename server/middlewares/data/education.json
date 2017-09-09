@@ -6,7 +6,8 @@
     "address": "Norway",
     "course": "Masters In Information System",
     "degree": "Masters",
-    "grade": "B"
+    "grade": "B",
+    "reference": "http://www.ntnu.no/"
   },
   {
     "id": 2,
@@ -15,16 +16,18 @@
     "address": "Nepal, Kathmandu Valley",
     "course": "Bachelor In Computer Science and Information Technology,",
     "degree": "Bachelors",
-    "grade": "91.6%."
+    "grade": "91.6%.",
+    "reference": "https://www.kathford.edu.np/"
   },
   {
     "id": 3,
     "year": "2005 – 2007",
-    "school": "Higher Secondary Education Board (HSEB)",
+    "school": "Caspain Valley College",
     "address": "Nepal, Kathmandu Valley",
-    "course": "Masters in Information System",
+    "course": "Higher Secondary Education Board (HSEB)",
     "degree": "PCL",
-    "grade": "83.5%"
+    "grade": "83.5%",
+    "reference": "http://www.caspian.edu.np/"
   },
   {
     "id": 4,
@@ -33,6 +36,7 @@
     "address": "Nepal, Kathmandu Valley",
     "course": "School Leaving Certificate (SLC)",
     "degree": "SLC",
-    "grade": "84.24%"
+    "grade": "84.24%",
+    "reference": "http://www.lmv.edu.np/"
   }
 ]
