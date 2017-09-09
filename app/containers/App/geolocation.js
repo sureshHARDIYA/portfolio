@@ -3,10 +3,11 @@ import axios from 'axios';
 export const language = new Promise((resolve) => {
   (function getLanguage() {
     function getCountryCode(country) {
+      const countryToLowerCase = country.toLowerCase();
       switch (country) {
-        case country.toLowerCase() === 'india':
+        case countryToLowerCase === 'india':
           return 'in';
-        case country.toLowerCase() === 'nepal':
+        case countryToLowerCase === 'nepal':
           return 'ne';
         default:
           return 'en';
