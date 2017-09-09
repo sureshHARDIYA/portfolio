@@ -52,13 +52,13 @@ export class HomePage extends React.PureComponent {
             <H2>Languages</H2>
             <ul>
               {general.languages &&
-                general.languages.map((item, index) =>
-                  <li key={index}>
+                general.languages.map((item) =>
+                  (<li key={item.id}>
                     {item.id} -
                     {item.name} -
                     {item.level} -
                     {item.comment} -
-                  </li>
+                  </li>)
                 )}
             </ul>
           </Section>
@@ -68,10 +68,10 @@ export class HomePage extends React.PureComponent {
             </H2>
             <ul>
               {general.references &&
-                Object.keys(general.references).map((item, index) =>
-                  <li key={index}>
+                Object.keys(general.references).map((item) =>
+                  (<li>
                     {general.references[item]}
-                  </li>
+                  </li>)
                 )}
             </ul>
           </Section>
@@ -79,12 +79,12 @@ export class HomePage extends React.PureComponent {
             <H2>Awards</H2>
             <ul>
               {general.awards &&
-                general.awards.map((item, index) =>
-                  <li key={index}>
+                general.awards.map((item) =>
+                  (<li key={item.id}>
                     {item.id} -
                     {item.year}
                     {item.title} -
-                  </li>
+                  </li>)
                 )}
             </ul>
           </Section>
@@ -92,10 +92,10 @@ export class HomePage extends React.PureComponent {
             <H2>Hobbies</H2>
             <ul>
               {general.interests &&
-                general.interests.map((item, index) =>
-                  <li key={index}>
+                general.interests.map((item) =>
+                  (<li>
                     {item}
-                  </li>
+                  </li>)
                 )}
             </ul>
             <HocComponent />
