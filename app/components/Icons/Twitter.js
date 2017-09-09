@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Twitter(props) {
   return (
@@ -14,7 +15,7 @@ function Twitter(props) {
 }
 
 Twitter.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Twitter;

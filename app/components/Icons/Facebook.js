@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function FacbookIcon(props) {
   return (
@@ -14,7 +15,7 @@ function FacbookIcon(props) {
 }
 
 FacbookIcon.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default FacbookIcon;

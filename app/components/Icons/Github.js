@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Github(props) {
   return (
@@ -14,7 +15,7 @@ function Github(props) {
 }
 
 Github.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Github;

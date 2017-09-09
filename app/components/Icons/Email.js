@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Email(props) {
   return (
@@ -14,7 +15,7 @@ function Email(props) {
 }
 
 Email.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Email;
