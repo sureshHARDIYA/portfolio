@@ -1,15 +1,9 @@
-/**
- *
- * ProgressBar
- *
-*/
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 import Percent from './Percent';
 
 class ProgressBar extends React.Component {
-
   static defaultProps = {
     percent: -1,
     autoIncrement: true,
@@ -62,7 +56,8 @@ class ProgressBar extends React.Component {
      * Only used when autoIncrement is set to true.
     */
     let { percent } = this.state;
-    percent += ((Math.random() + 1) - Math.random());
+    //eslint-disable-next-line
+    percent += Math.random() + 1 - Math.random();
     percent = percent < 99 ? percent : 99;
     this.setState({
       percent,
@@ -85,15 +80,21 @@ class ProgressBar extends React.Component {
     */
 
     if (props.percent >= 100) {
-      this.setState({
-        percent: 99.9,
-      }, () => {
-        this.timeout = setTimeout(() => {
-          this.setState({
-            percent: -1,
-          }, () => props.updateProgress(-1));
-        }, 300);
-      });
+      this.setState(
+        {
+          percent: 99.9,
+        },
+        () => {
+          this.timeout = setTimeout(() => {
+            this.setState(
+              {
+                percent: -1,
+              },
+              () => props.updateProgress(-1)
+            );
+          }, 300);
+        }
+      );
     } else {
       this.setState({
         percent: props.percent,
@@ -108,7 +109,7 @@ class ProgressBar extends React.Component {
     const isHidden = percent < 0 || percent >= 100;
 
     // Set `state.percent` as width.
-    const style = { width: `${(percent <= 0 ? 0 : percent)}%` };
+    const style = { width: `${percent <= 0 ? 0 : percent}%` };
 
     return (
       <Wrapper hidden={isHidden}>
