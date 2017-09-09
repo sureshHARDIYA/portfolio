@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import TextLoop from 'react-text-loop';
-import { Link } from 'react-router';
 import styled from 'styled-components';
 
 import CallToActionButton from 'components/CallToActionButton';
-import A from 'components/A';
 
 import Banner from './skm.jpg';
 import Img from './Img';
@@ -69,7 +67,7 @@ const ButtonGroup = styled.div`
   margin-top: 2rem;
 `;
 
-const HireMeButton = styled(A)`
+const HireMeButton = styled.a`
   border: none;
   font-family: inherit;
   font-size: inherit;
