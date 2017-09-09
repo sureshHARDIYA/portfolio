@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Contact(props) {
   return (
@@ -17,7 +18,7 @@ function Contact(props) {
 }
 
 Contact.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Contact;
