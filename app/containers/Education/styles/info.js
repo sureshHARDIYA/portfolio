@@ -5,13 +5,12 @@ const Info = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 451px;
-  min-width: 400px;
+  width: 100%;
   margin-bottom: 20px;
   border-radius: 6px;
   box-sizing: border-box;
   box-shadow: 3px 3px 10px 0px rgba(46,61,73,0.2);
-  
+
   &:after {
     right: 100%;
     border: solid transparent;
@@ -28,7 +27,7 @@ const Info = styled.div`
      margin-bottom: 40px;
    }
 
-  
+
   & h4 {
     text-align: left;
     font-size: 14px;
@@ -39,17 +38,17 @@ const Info = styled.div`
     background: ${colors.brandGreenLight};
     color: ${colors.lightgrey};
   }
-  
-  
+
+
   & div {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-      
+
   @media screen and (max-width: 780px){
      margin-top: 10px;
    }
-    
+
     & >  span {
       flex-basis: 100%;
       display: block;
@@ -57,12 +56,12 @@ const Info = styled.div`
       border-top: 1px solid #EEE;
       border-bottom: 1px solid #EEE;
       font-size: 14px;
-      
+
       &:first-child {
         border-top: none;
       }
-      
-      
+
+
       &:last-child {
         border-bottom: none;
       }
