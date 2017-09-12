@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import TextLoop from 'react-text-loop';

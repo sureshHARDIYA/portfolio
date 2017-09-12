@@ -62,6 +62,7 @@ export function mapDispatchToProps(dispatch) {
   };
 }
 
+
 const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
   educations: makeSelectEducation(),
