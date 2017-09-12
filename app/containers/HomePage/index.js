@@ -69,7 +69,7 @@ export class HomePage extends React.PureComponent {
             <ul>
               {general.references &&
                 Object.keys(general.references).map((item) =>
-                  (<li>
+                  (<li key={item}>
                     {general.references[item]}
                   </li>)
                 )}
@@ -93,7 +93,7 @@ export class HomePage extends React.PureComponent {
             <ul>
               {general.interests &&
                 general.interests.map((item) =>
-                  (<li>
+                  (<li key={item}>
                     {item}
                   </li>)
                 )}

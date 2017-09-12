@@ -64,7 +64,9 @@
     ],
     "env": {
       "production": {
-        "only": ["app"],
+        "only": [
+          "app"
+        ],
         "plugins": [
           "transform-react-remove-prop-types",
           "transform-react-constant-elements",
@@ -72,7 +74,10 @@
         ]
       },
       "test": {
-        "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+        "plugins": [
+          "transform-es2015-modules-commonjs",
+          "dynamic-import-node"
+        ]
       }
     }
   },
@@ -85,7 +90,11 @@
       "jest": true,
       "es6": true
     },
-    "plugins": ["redux-saga", "react", "jsx-a11y"],
+    "plugins": [
+      "redux-saga",
+      "react",
+      "jsx-a11y"
+    ],
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -94,9 +103,18 @@
       }
     },
     "rules": {
-      "arrow-parens": ["error", "always"],
-      "arrow-body-style": [2, "as-needed"],
-      "comma-dangle": [2, "always-multiline"],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -126,7 +144,10 @@
       "prefer-template": 2,
       "class-methods-use-this": 0,
       "react/forbid-prop-types": 0,
-      "react/jsx-first-prop-new-line": [2, "multiline"],
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
       "react/jsx-filename-extension": 0,
       "react/jsx-no-target-blank": 0,
       "react/require-extension": 0,
@@ -156,7 +177,11 @@
       "minimist",
       "sanitize.css"
     ],
-    "include": ["core-js", "lodash", "eventsource-polyfill"]
+    "include": [
+      "core-js",
+      "lodash",
+      "eventsource-polyfill"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
@@ -174,7 +199,10 @@
         "lines": 98
       }
     },
-    "moduleDirectories": ["node_modules", "app"],
+    "moduleDirectories": [
+      "node_modules",
+      "app"
+    ],
     "moduleNameMapper": {
       ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
       ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js"
@@ -205,7 +233,6 @@
     "react-intl": "2.4.0",
     "react-redux": "5.0.6",
     "react-router": "3.0.0",
-    "react-router-dom": "4.2.2",
     "react-router-redux": "4.0.8",
     "react-router-scroll": "0.4.2",
     "react-scroll": "1.5.4",
@@ -226,7 +253,7 @@
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-loader": "7.1.2",
-    "babel-plugin-dynamic-import-node": "1.0.2",
+    "babel-plugin-dynamic-import-node": "^1.1.0",
     "babel-plugin-react-intl": "2.3.1",
     "babel-plugin-react-transform": "2.0.2",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
@@ -237,7 +264,7 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.24.1",
-    "cheerio": "0.22.0",
+    "cheerio": ".22.0",
     "circular-dependency-plugin": "4.2.0",
     "coveralls": "2.13.1",
     "css-loader": "0.28.7",
@@ -267,7 +294,7 @@
     "pre-commit": "1.2.2",
     "prop-types": "15.5.10",
     "react-addons-test-utils": "15.6.0",
-    "rimraf": "2.6.1",
+    "rimraf": "^2.6.2",
     "shelljs": "0.7.8",
     "sinon": "3.2.1",
     "style-loader": "0.18.2",

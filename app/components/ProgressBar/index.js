@@ -28,6 +28,7 @@ function withProgressBar(WrappedComponent) {
 
     componentWillUpdate(newProps, newState) {
       const { loadedRoutes, progress } = this.state;
+      console.log(newProps, newState);
       const { pathname } = newProps.location;
 
       // Complete progress when route changes. But prevent state update while re-rendering.
