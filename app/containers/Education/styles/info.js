@@ -54,7 +54,18 @@ const Info = styled.div`
       flex-basis: 100%;
       display: block;
       padding: 0.687rem;
+      border-top: 1px solid #EEE;
+      border-bottom: 1px solid #EEE;
       font-size: 14px;
+      
+      &:first-child {
+        border-top: none;
+      }
+      
+      
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 `;
