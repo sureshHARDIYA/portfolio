@@ -131,7 +131,7 @@
       ],
       "jsx-a11y/aria-props": 2,
       "jsx-a11y/heading-has-content": 0,
-      "jsx-a11y/href-no-hash": 2,
+      "jsx-a11y/href-no-hash": 0,
       "jsx-a11y/label-has-for": 2,
       "jsx-a11y/mouse-events-have-key-events": 2,
       "jsx-a11y/role-has-required-aria-props": 2,
@@ -249,7 +249,7 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
-    "babel-eslint": "7.1.1",
+    "babel-eslint": "7.2.3",
     "babel-loader": "7.1.2",
     "babel-plugin-dynamic-import-node": "1.0.0",
     "babel-plugin-react-intl": "2.3.1",
