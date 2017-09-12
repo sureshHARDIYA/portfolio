@@ -27,8 +27,4 @@ export default defineMessages({
     id: 'skmukhiya.containers.HomePage.tryme.atPrefix',
     defaultMessage: '@',
   },
-  show_testimonial: {
-    id: 'skmukhiya.containers.HomePage.show_testimonial',
-    defaultMessage: 'Show Testimonial',
-  },
 });

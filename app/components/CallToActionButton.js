@@ -8,7 +8,7 @@ const CallToActionButton = styled(Link)`
   color: inherit;
   background: ${(props) => (props.background ? props.background : 'none')};
   cursor: pointer;
-  padding: ${(props) => (props.medium ? '8px 50px' : '25px 80px')};
+  padding: 25px 80px;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
