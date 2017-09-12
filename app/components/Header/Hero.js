@@ -109,7 +109,7 @@ const HireMeButton = styled(A)`
 
 const ContactButtonHeader = styled(CallToActionButton)`
   padding: 8px 50px;
-`
+`;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Hero extends Component {
