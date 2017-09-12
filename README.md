@@ -1,5 +1,5 @@
 # Portfolio (in progress)
-This is still in development. This is my personal project developed to make easy portfolio site with `reactjs`, `redux`, `redux-saga`, `react-intl`, `styled-component` and other dependencies. The related dependencies will be cited once the development is completed. 
+This is still in development. This is my personal project developed to make easy portfolio site with `reactjs`, `redux`, `redux-saga`, `react-intl`, `styled-component` and other dependencies. The related dependencies will be cited once the development is completed.
 
 ## Demo ( In Progress)
 Will be deploying to heroku Soon
@@ -15,8 +15,9 @@ Demo should be ready at: http://localhost:3000
 
 ## Powered by
 - [reactjs](https://facebook.github.io/react/)
-- redux
-- styled-component
-- redux-saga
-- react-intl
-- react-boilerplate
+- [redux](https://github.com/reactjs/react-redux)
+- [styled-component](https://github.com/styled-components/styled-components)
+- [redux-saga](https://github.com/redux-saga/redux-saga)
+- [react-intl](https://github.com/yahoo/react-intl)
+- [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
+- and others 
