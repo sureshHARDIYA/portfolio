@@ -5,6 +5,7 @@ const FooterMenu = styled.li`
   font-size: 3rem;
   display: inline-block;
   line-height: 1.4;
+  width: 70px;
 `;
 
 export default FooterMenu;
