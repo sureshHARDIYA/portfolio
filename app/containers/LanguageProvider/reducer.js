@@ -13,9 +13,11 @@ import {
   DEFAULT_LOCALE,
 } from '../App/constants';
 
-const initialState = fromJS({
-  locale: DEFAULT_LOCALE,
-});
+import { appLocales } from '../../i18n';
+const localeInStore = localStorage.getItem('currentLocale');
+const locale = appLocales.includes(localeInStore) ? localeInStore : DEFAULT_LOCALE;
+
+const initialState = fromJS({ locale });
 
 function languageProviderReducer(state = initialState, action) {
   switch (action.type) {

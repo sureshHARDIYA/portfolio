@@ -13,12 +13,14 @@ import 'sanitize.css/sanitize.css';
 
 // Import root app
 import App from 'containers/App';
+import { language } from 'containers/App/geolocation';
 
 // Import selector for `syncHistoryWithStore`
 import { makeSelectLocationState } from 'containers/App/selectors';
 
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
+import { changeLocale } from 'containers/LanguageProvider/actions';
 
 // Load the favicon, the manifest.json file and the .htaccess file
 /* eslint-disable import/no-webpack-loader-syntax */
@@ -79,9 +81,11 @@ const render = (messages) => {
         <Router
           history={history}
           routes={rootRoute}
-          render={// Scroll to top when going to a new page, imitating default browser
-          // behaviour
-          applyRouterMiddleware(useScroll())}
+          render={
+            // Scroll to top when going to a new page, imitating default browser
+            // behaviour
+            applyRouterMiddleware(useScroll())
+          }
         />
       </LanguageProvider>
     </Provider>,
@@ -117,6 +121,15 @@ if (!window.Intl) {
 } else {
   render(translationMessages);
 }
+
+language
+  .then((languageInCountry) => {
+    const currentLocale = store.getState().get('language').get('locale');
+    if (languageInCountry !== currentLocale && !localStorage.getItem('currentLocale')) {
+      store.dispatch(changeLocale(languageInCountry));
+      localStorage.setItem('currentLocale', languageInCountry);
+    }
+  });
 
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,
