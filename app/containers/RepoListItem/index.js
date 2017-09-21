@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { FormattedNumber } from 'react-intl';
 
 import ListItem from 'components/ListItem';
@@ -7,7 +7,7 @@ import IssueLink from './IssueLink';
 import RepoLink from './RepoLink';
 import Wrapper from './Wrapper';
 
-export class RepoListItem extends React.PureComponent {
+export class RepoListItem extends PureComponent {
   // eslint-disable-line react/prefer-stateless-function
   render() {
     const item = this.props.item;
