@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import colors from '../../../styles/colors';
 
 const Button = styled.button`
-  height: 44px;
   padding: 0.7rem 2rem;
   display: block;
   margin: 1.1rem auto;

@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import axios from 'axios';
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
+import styled from 'styled-components';
+
+import Mail from 'components/Icons/Email';
 
 import Header from './styles/header';
 import { Wrapper, FormGroup } from './styles/wrappers';
@@ -13,6 +16,12 @@ import Button from './styles/button';
 import Notifier from './styles/notifier';
 import { validateInputFields } from './validator';
 import messages from './messages';
+
+const MailIcon = styled(Mail)`
+  margin-left: 0.5rem;
+  transition: 0.5s;
+  transition-property: margin;
+`;
 
 class Contact extends Component {
   static propTypes = {
@@ -131,7 +140,8 @@ class Contact extends Component {
               </FormGroup>
               <FormGroup>
                 <Button type="submit">
-                  <FormattedMessage {...messages.submitButtonText} /> ➣
+                  <FormattedMessage {...messages.submitButtonText} />
+                  <MailIcon height="1.75em" width="1.75em" />
                 </Button>
               </FormGroup>
               <input type="hidden" name="_subject" value="New submission! 😁" />
