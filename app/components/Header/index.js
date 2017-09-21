@@ -9,6 +9,7 @@ import Globe from 'components/Icons/Globe';
 import Portfolio from 'components/Icons/Portfolio';
 import Contact from 'components/Icons/Contact';
 import LocaleToggle from 'containers/LocaleToggle';
+import Download from 'components/Icons/Download';
 
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
@@ -92,6 +93,12 @@ class Header extends React.Component {
             <Contact />
             <MenuNameWrapper>
               <FormattedMessage {...messages.contact} />
+            </MenuNameWrapper>
+          </A>
+          <A href="http://download710.mediafire.com/xudrq4dm4jfg/zyov83v7ue9yaa2/curriculum-vitae.pdf">
+            <Download />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.download_resume} />
             </MenuNameWrapper>
           </A>
         </Menu>
