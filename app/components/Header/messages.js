@@ -30,6 +30,10 @@ export default defineMessages({
     id: 'skmukhiya.component.Header.portfolio',
     defaultMessage: 'Portfolio',
   },
+  download_resume: {
+    id: 'skmukhiya.component.Header.download_resume',
+    defaultMessage: 'Resume',
+  },
   CallToActionButtonHeader: {
     id: 'skmukhiya.containers.HomePage.CallToActionButtonHeader',
     defaultMessage: 'Contact',
