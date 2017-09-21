@@ -9,9 +9,20 @@ export default defineMessages({
     id: 'skmukhiya.containers.Contact.submitButtonText',
     defaultMessage: 'Send Message',
   },
-  scaffoldingMessage: {
-    id: 'skmukhiya.containers.FeaturePage.scaffolding.message',
-    defaultMessage: `Automate the creation of components, containers, routes, selectors
-  and sagas - and their tests - right from the CLI!`,
+  placeholderTextFullName: {
+    id: 'skmukhiya.containers.Contact.scaffolding.placeholderTextFullName',
+    defaultMessage: 'Enter your full name.',
+  },
+  placeholderEmail: {
+    id: 'skmukhiya.containers.Contact.placeholderEmail',
+    defaultMessage: 'Enter Email',
+  },
+  placeholderPhone: {
+    id: 'skmukhiya.containers.Contact.placeholderPhone',
+    defaultMessage: 'Phone',
+  },
+  placeholderSendMessage: {
+    id: 'skmukhiya.containers.Contact.placeholderSendMessage',
+    defaultMessage: 'Send Message',
   },
 });
