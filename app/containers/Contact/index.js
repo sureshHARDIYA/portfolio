@@ -1,9 +1,9 @@
 /* eslint-disable no-trailing-spaces,react/sort-comp,one-var,arrow-body-style,no-restricted-syntax,no-return-assign,no-param-reassign,no-unused-expressions */
 
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import axios from 'axios';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 
 import Header from './styles/header';
 import { Wrapper, FormGroup } from './styles/wrappers';
@@ -14,8 +14,10 @@ import Notifier from './styles/notifier';
 import { validateInputFields } from './validator';
 import messages from './messages';
 
-class FeaturePage extends React.Component {
-  // eslint-disable-line react/prefer-stateless-function
+class Contact extends Component {
+  static propTypes = {
+    intl: intlShape.isRequired,
+  };
   state = {
     name: '',
     email: '',
@@ -69,6 +71,7 @@ class FeaturePage extends React.Component {
 
   render() {
     const { name, email, tel } = this.state;
+    const { intl } = this.props;
     return (
       <div>
         <Helmet
@@ -89,7 +92,9 @@ class FeaturePage extends React.Component {
               <InputField
                 config={{
                   name: 'name',
-                  placeholder: 'Full Name',
+                  placeholder: intl.formatMessage(
+                    messages.placeholderTextFullName
+                  ),
                   val: name,
                   onInputChange: this.onInputChange,
                 }}
@@ -97,7 +102,7 @@ class FeaturePage extends React.Component {
               <InputField
                 config={{
                   type: 'email',
-                  placeholder: 'Email Address',
+                  placeholder: intl.formatMessage(messages.placeholderEmail),
                   val: email,
                   onInputChange: this.onInputChange,
                 }}
@@ -106,14 +111,16 @@ class FeaturePage extends React.Component {
                 config={{
                   name: 'phone',
                   type: 'tel',
-                  placeholder: 'Phone',
+                  placeholder: intl.formatMessage(messages.placeholderPhone),
                   val: tel,
                   onInputChange: this.onInputChange,
                 }}
               />
               <FormGroup>
                 <TextArea
-                  placeholder="Send A message"
+                  placeholder={intl.formatMessage(
+                    messages.placeholderSendMessage
+                  )}
                   name="message"
                   onChange={(e) => this.onInputChange(e, 'message')}
                   autoCorrect
@@ -146,4 +153,4 @@ class FeaturePage extends React.Component {
   }
 }
 
-export default FeaturePage;
+export default injectIntl(Contact);
