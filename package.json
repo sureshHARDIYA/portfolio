@@ -20,8 +20,6 @@
     "analyze": "node ./internals/scripts/analyze.js",
     "extract-intl":
       "babel-node --presets latest,stage-0 -- ./internals/scripts/extract-intl.js",
-    "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
-    "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean",
     "build":
@@ -48,8 +46,7 @@
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -195,7 +192,7 @@
   "dependencies": {
     "axios": "0.16.2",
     "babel-polyfill": "6.26.0",
-    "chalk": "2.1.0",
+    "chalk": "^2.1.0",
     "compression": "1.7.0",
     "cross-env": "5.0.5",
     "express": "4.15.4",
@@ -276,7 +273,7 @@
     "prop-types": "15.5.10",
     "react-addons-test-utils": "15.4.1",
     "rimraf": "2.6.2",
-    "shelljs": "0.7.5",
+    "shelljs": "^0.7.5",
     "sinon": "3.2.1",
     "style-loader": "0.18.2",
     "url-loader": "0.5.9",
