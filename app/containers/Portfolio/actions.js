@@ -1,19 +1,21 @@
-import {
-  LOAD_EDUCATIONS,
-  LOAD_EDUCATIONS_SUCCESS,
-  LOAD_EDUCATIONS_FAILURE,
-} from './constants';
+import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
 
-export const loadEducations = () => ({
-  type: LOAD_EDUCATIONS,
-});
+export function loadRepos() {
+  return {
+    type: LOAD_REPOS,
+  };
+}
 
-export const loadEducationsSuccess = (payload) => ({
-  type: LOAD_EDUCATIONS_SUCCESS,
-  payload,
-});
+export function reposLoaded(repos) {
+  return {
+    type: LOAD_REPOS_SUCCESS,
+    repos,
+  };
+}
 
-export const loadEducationsFailure = (error) => ({
-  type: LOAD_EDUCATIONS_FAILURE,
-  error,
-});
+export function repoLoadingError(error) {
+  return {
+    type: LOAD_REPOS_ERROR,
+    error,
+  };
+}

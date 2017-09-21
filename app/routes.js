@@ -66,15 +66,15 @@ export default function createRoutes(store) {
       name: 'portfolio',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Education/reducer'),
-          import('containers/Education/sagas'),
-          import('containers/Education'),
+          import('containers/Portfolio/reducer'),
+          import('containers/Portfolio/sagas'),
+          import('containers/Portfolio'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, sagas, component]) => {
-          injectReducer('educations', reducer.default);
+          injectReducer('portfolio', reducer.default);
           injectSagas(sagas.default);
 
           renderRoute(component);
@@ -83,15 +83,6 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     },
-    // {
-    //   path: '/skills',
-    //   name: 'skills',
-    //   getComponent(nextState, cb) {
-    //     import('containers/SkillsPage')
-    //       .then(loadModule(cb))
-    //       .catch(errorLoading);
-    //   },
-    // },
     {
       path: '/skills',
       name: 'skills',

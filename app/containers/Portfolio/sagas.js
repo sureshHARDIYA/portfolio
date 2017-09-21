@@ -1,21 +1,29 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { take, call, put, cancel, takeLatest } from 'redux-saga/effects';
+import { LOCATION_CHANGE } from 'react-router-redux';
+
 import request from 'utils/request';
 
-import { LOAD_EDUCATIONS } from './constants';
-import { loadEducationsSuccess, loadEducationsFailure } from './actions';
+import { LOAD_REPOS } from './constants';
+import { reposLoaded, repoLoadingError } from './actions';
 
-export function* educationData() {
-  yield takeLatest(LOAD_EDUCATIONS, getEducations);
-}
+export function* getRepos() {
+  // Select username from store
+  const username = 'sureshHARDIYA';
+  const requestURL = `https://api.github.com/users/${username}/repos?type=all&sort=updated`;
 
-export function* getEducations() {
   try {
-    const payload = yield call(request, 'api/education');
-    yield put(loadEducationsSuccess(payload));
+    const repos = yield call(request, requestURL);
+    yield put(reposLoaded(repos, username));
   } catch (err) {
-    yield put(loadEducationsFailure(err));
+    yield put(repoLoadingError(err));
   }
 }
 
-// Bootstrap sagas
-export default [educationData];
+export function* githubData() {
+  const watcher = yield takeLatest(LOAD_REPOS, getRepos);
+
+  yield take(LOCATION_CHANGE);
+  yield cancel(watcher);
+}
+
+export default [githubData];

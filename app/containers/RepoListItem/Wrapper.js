@@ -5,6 +5,8 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: space-between;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export default Wrapper;

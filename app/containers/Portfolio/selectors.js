@@ -1,12 +1,16 @@
-/**
- * The global state selectors
- */
-
 import { createSelector } from 'reselect';
 
-const selectEducation = (state) => state.get('educations');
+const selectGlobal = (state) => state.get('portfolio');
 
-const makeSelectEducation = () =>
-  createSelector(selectEducation, (educations) => educations.get('items'));
+const makeSelectLoading = () =>
+  createSelector(selectGlobal, (globalState) => globalState.get('loading'));
 
-export { makeSelectEducation };
+const makeSelectError = () =>
+  createSelector(selectGlobal, (globalState) => globalState.get('error'));
+
+const makeSelectRepos = () =>
+  createSelector(selectGlobal, (globalState) =>
+    globalState.getIn(['userData', 'repositories'])
+  );
+
+export { selectGlobal, makeSelectLoading, makeSelectError, makeSelectRepos };
