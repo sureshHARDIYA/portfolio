@@ -1,4 +1,5 @@
 {
+  "skmukhiya.component.Header.download_resume": "बायो डाटा",
   "skmukhiya.component.Header.educations": "शिक्षा",
   "skmukhiya.component.Header.portfolio": "पोर्टफोलियो",
   "skmukhiya.components.Footer.author.message":
@@ -9,9 +10,14 @@
   "skmukhiya.components.Header.contact": "सम्पर्क",
   "skmukhiya.components.Header.home": "गृहपृष्ठ",
   "skmukhiya.components.Header.skills": "कौशल र क्षमताहरू",
-  "skmukhiya.containers.Contact.header": "",
-  "skmukhiya.containers.Contact.submitButtonText": "",
-  "skmukhiya.containers.FeaturePage.css.header": "कौशल र क्षमताहरू",
+  "skmukhiya.containers.Contact.header": "मलाई सम्पर्क गर्नुस्",
+  "skmukhiya.containers.Contact.placeholderEmail": "इमेल प्रविष्ट गर्नुहोस्",
+  "skmukhiya.containers.Contact.placeholderPhone": "फोन",
+  "skmukhiya.containers.Contact.placeholderSendMessage": "सन्देश पठाउनुहोस्",
+  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName":
+    "आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्।",
+  "skmukhiya.containers.Contact.submitButtonText": "सन्देश पठाउनुहोस्",
+  "skmukhiya.containers.FeaturePage.header": "कौशल र क्षमताहरू",
   "skmukhiya.containers.HomePage.CallToActionButton": "मलाई सम्पर्क गर्नुस्",
   "skmukhiya.containers.HomePage.CallToActionButtonHeader": "सम्पर्क",
   "skmukhiya.containers.HomePage.CallToActionButtonHire":
@@ -33,9 +39,12 @@
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
   "skmukhiya.containers.LocaleToggle.de": "de",
   "skmukhiya.containers.LocaleToggle.en": "en",
+  "skmukhiya.containers.LocaleToggle.ne": "ne",
   "skmukhiya.containers.NotFoundPage.header":
     "पपृष्ठ उपलब्ध छैन | सायद हामी यो पेजमा काम गर्दै छौँ होला। केही क्षणमा पुनः प्रयास गर्नुहोस्।",
-  "skmukhiya.containers.Portfolio.getAllReposByMe": "",
-  "skmukhiya.containers.Portfolio.header": "",
-  "skmukhiya.containers.Portfolio.headerMessage": ""
+  "skmukhiya.containers.Portfolio.getAllReposByMe":
+    "मेरो द्वारा प्रकाशित  open-source repositories देखाउनुहोस्।",
+  "skmukhiya.containers.Portfolio.header": "पोर्टफोलियो",
+  "skmukhiya.containers.Portfolio.headerMessage":
+    "मैले योगदान दिएका repositories चेकआउट गर्नुहोस्।"
 }
