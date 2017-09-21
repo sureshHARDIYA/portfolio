@@ -49,14 +49,12 @@ class SkillsPage extends Component {
                     <Level>{item.level}</Level>
                   </ListItemTitle>
                   <p>{item.title}</p>
-                  <p>
-                    <ul>
-                      {item.comments &&
-                        item.comments.map((comment, index) => (
-                          <li key={index}>{comment}</li>
-                        ))}
-                    </ul>
-                  </p>
+                  <ul>
+                    {item.comments &&
+                      item.comments.map((comment, index) => (
+                        <li key={index}>{comment}</li>
+                      ))}
+                  </ul>
                 </ListItem>
               ))}
           </List>
