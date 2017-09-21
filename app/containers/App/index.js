@@ -30,9 +30,7 @@ export function App(props) {
         meta={[{ name: 'description', content: 'Frontend Developer, Nepal' }]}
       />
       <Header />
-      <Content>
-        {React.Children.toArray(props.children)}
-      </Content>
+      <Content>{React.Children.toArray(props.children)}</Content>
       <CallToAction>
         <ContainerWrapper>
           <H2>

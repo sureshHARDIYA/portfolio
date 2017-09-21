@@ -81,11 +81,9 @@ const render = (messages) => {
         <Router
           history={history}
           routes={rootRoute}
-          render={
-            // Scroll to top when going to a new page, imitating default browser
-            // behaviour
-            applyRouterMiddleware(useScroll())
-          }
+          render={// Scroll to top when going to a new page, imitating default browser
+          // behaviour
+            applyRouterMiddleware(useScroll())}
         />
       </LanguageProvider>
     </Provider>,
@@ -122,14 +120,19 @@ if (!window.Intl) {
   render(translationMessages);
 }
 
-language
-  .then((languageInCountry) => {
-    const currentLocale = store.getState().get('language').get('locale');
-    if (languageInCountry !== currentLocale && !localStorage.getItem('currentLocale')) {
-      store.dispatch(changeLocale(languageInCountry));
-      localStorage.setItem('currentLocale', languageInCountry);
-    }
-  });
+language.then((languageInCountry) => {
+  const currentLocale = store
+    .getState()
+    .get('language')
+    .get('locale');
+  if (
+    languageInCountry !== currentLocale &&
+    !localStorage.getItem('currentLocale')
+  ) {
+    store.dispatch(changeLocale(languageInCountry));
+    localStorage.setItem('currentLocale', languageInCountry);
+  }
+});
 
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,

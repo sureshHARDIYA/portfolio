@@ -18,6 +18,10 @@ export default defineMessages({
     id: 'skmukhiya.components.Header.contact',
     defaultMessage: 'Contact',
   },
+  blogs: {
+    id: 'skmukhiya.components.Header.blogs',
+    defaultMessage: 'Blog',
+  },
   educations: {
     id: 'skmukhiya.component.Header.educations',
     defaultMessage: 'Education',

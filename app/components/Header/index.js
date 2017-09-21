@@ -5,6 +5,7 @@ import { slide as Menu } from 'react-burger-menu';
 import Home from 'components/Icons/Home';
 import Education from 'components/Icons/Education';
 import Skills from 'components/Icons/Skills';
+import Globe from 'components/Icons/Globe';
 import Portfolio from 'components/Icons/Portfolio';
 import Contact from 'components/Icons/Contact';
 import LocaleToggle from 'containers/LocaleToggle';
@@ -69,6 +70,12 @@ class Header extends React.Component {
               <FormattedMessage {...messages.skills} />
             </MenuNameWrapper>
           </A>
+          <A href="https://www.skmukhiya.com.np">
+            <Globe />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.blogs} />
+            </MenuNameWrapper>
+          </A>
           <A href="/educations">
             <Education />
             <MenuNameWrapper>
@@ -111,6 +118,12 @@ class Header extends React.Component {
             <Portfolio />
             <MenuNameWrapper>
               <FormattedMessage {...messages.portfolio} />
+            </MenuNameWrapper>
+          </HeaderLink>
+          <HeaderLink href="https://www.skmukhiya.com.np">
+            <Globe />
+            <MenuNameWrapper>
+              <FormattedMessage {...messages.blogs} />
             </MenuNameWrapper>
           </HeaderLink>
           <HeaderLink to="/contact">

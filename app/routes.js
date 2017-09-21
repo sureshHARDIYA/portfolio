@@ -83,20 +83,44 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     },
+    // {
+    //   path: '/skills',
+    //   name: 'skills',
+    //   getComponent(nextState, cb) {
+    //     import('containers/SkillsPage')
+    //       .then(loadModule(cb))
+    //       .catch(errorLoading);
+    //   },
+    // },
     {
       path: '/skills',
       name: 'skills',
       getComponent(nextState, cb) {
-        import('containers/SkillsPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          import('containers/SkillsPage/reducer'),
+          import('containers/SkillsPage/sagas'),
+          import('containers/SkillsPage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('skills', reducer.default);
+          injectSagas(sagas.default);
+
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     },
     {
       path: '/contact',
       name: 'contact',
       getComponent(nextState, cb) {
-        import('containers/Contact').then(loadModule(cb)).catch(errorLoading);
+        import('containers/Contact')
+          .then(loadModule(cb))
+          .catch(errorLoading);
       },
     },
     {

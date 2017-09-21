@@ -3,6 +3,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import axios from 'axios';
+import { FormattedMessage } from 'react-intl';
+
 import Header from './styles/header';
 import { Wrapper, FormGroup } from './styles/wrappers';
 import InputField from './Inputs';
@@ -10,6 +12,7 @@ import TextArea from './styles/textarea';
 import Button from './styles/button';
 import Notifier from './styles/notifier';
 import { validateInputFields } from './validator';
+import messages from './messages';
 
 class FeaturePage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -19,36 +22,38 @@ class FeaturePage extends React.Component {
     tel: '',
     message: '',
     status: null,
-
-  }
-  delayStatusReset = () => setTimeout(() => this.setState({ status: null }), 3000)
+  };
+  delayStatusReset = () =>
+    setTimeout(() => this.setState({ status: null }), 3000);
 
   resetState = () => {
     const state = Object.assign({}, this.state);
     const reset = Object.keys(state).reduce((cur, prev) => {
-      prev === 'status' ? cur[prev] = this.state.status : cur[prev] = '';
+      prev === 'status' ? (cur[prev] = this.state.status) : (cur[prev] = '');
       return cur;
     }, {});
     this.setState(reset);
     return this.delayStatusReset();
-  }
+  };
 
   onInputChange = (e, inputName) =>
     this.setState({ [inputName]: e.target.value });
 
   sendEmail = ({ name, tel, email, message }) => {
-    axios.post('http://formspree.io/gregjarvez@gmail.com', {
-      header: { 'content-type': 'application/html' },
-      data: {
-        message: {
-          name,
-          tel,
-          email,
-          message,
+    axios
+      .post('http://formspree.io/gregjarvez@gmail.com', {
+        header: { 'content-type': 'application/html' },
+        data: {
+          message: {
+            name,
+            tel,
+            email,
+            message,
+          },
         },
-      },
-    }).then((response) => this.setState({ status: response.status }));
-  }
+      })
+      .then((response) => this.setState({ status: response.status }));
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -76,7 +81,9 @@ class FeaturePage extends React.Component {
           ]}
         />
         <Wrapper>
-          <Header>CONTACT ME</Header>
+          <Header>
+            <FormattedMessage {...messages.header} />
+          </Header>
           <FormGroup>
             <form onSubmit={this.onFormSubmit}>
               <InputField
@@ -111,21 +118,27 @@ class FeaturePage extends React.Component {
                   onChange={(e) => this.onInputChange(e, 'message')}
                   autoCorrect
                   value={this.state.message}
-                >{ this.state.message }</TextArea>
+                >
+                  {this.state.message}
+                </TextArea>
               </FormGroup>
               <FormGroup>
-                <Button type="submit">Submit ➣</Button>
+                <Button type="submit">
+                  <FormattedMessage {...messages.submitButtonText} /> ➣
+                </Button>
               </FormGroup>
               <input type="hidden" name="_subject" value="New submission! 😁" />
             </form>
           </FormGroup>
           <FormGroup>
-            {
-              this.state.status === 200 &&
+            {this.state.status === 200 && (
               <Notifier status={this.state.status}>
-                Thank you! I will speak to you soon 😉
+                Thank you! I will speak to you soon
+                <span role="img" aria-label="thank you">
+                  😉
+                </span>
               </Notifier>
-            }
+            )}
           </FormGroup>
         </Wrapper>
       </div>

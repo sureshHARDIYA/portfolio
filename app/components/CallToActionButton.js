@@ -27,7 +27,6 @@ const CallToActionButton = styled(Link)`
     transition: all 0.3s;
   }
 
-
   &:hover {
     color: #5cbb2f;
     background: ${(props) => (props.background ? '#f4f8f1' : '#fff')};
