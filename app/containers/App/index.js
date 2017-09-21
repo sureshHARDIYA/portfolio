@@ -29,10 +29,8 @@ export function App(props) {
         defaultTitle="Frontend Developer"
         meta={[{ name: 'description', content: 'Frontend Developer, Nepal' }]}
       />
-      <Header />
-      <Content>
-        {React.Children.toArray(props.children)}
-      </Content>
+      <Header location={props.location} />
+      <Content>{React.Children.toArray(props.children)}</Content>
       <CallToAction>
         <ContainerWrapper>
           <H2>
@@ -50,6 +48,7 @@ export function App(props) {
 
 App.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default withProgressBar(App);

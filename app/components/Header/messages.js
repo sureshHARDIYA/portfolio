@@ -18,6 +18,10 @@ export default defineMessages({
     id: 'skmukhiya.components.Header.contact',
     defaultMessage: 'Contact',
   },
+  blogs: {
+    id: 'skmukhiya.components.Header.blogs',
+    defaultMessage: 'Blog',
+  },
   educations: {
     id: 'skmukhiya.component.Header.educations',
     defaultMessage: 'Education',
@@ -25,6 +29,10 @@ export default defineMessages({
   portfolio: {
     id: 'skmukhiya.component.Header.portfolio',
     defaultMessage: 'Portfolio',
+  },
+  download_resume: {
+    id: 'skmukhiya.component.Header.download_resume',
+    defaultMessage: 'Resume',
   },
   CallToActionButtonHeader: {
     id: 'skmukhiya.containers.HomePage.CallToActionButtonHeader',

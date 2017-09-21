@@ -16,7 +16,9 @@ export const language = new Promise((resolve) => {
 
     navigator.geolocation.getCurrentPosition((location) => {
       const { longitude: lon, latitude: lat } = location.coords;
-      const url = encodeURI(`http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&username=gregjarvez1_`);
+      const url = encodeURI(
+        `http://api.geonames.org/findNearbyPlaceNameJSON?lat=${lat}&lng=${lon}&username=gregjarvez1_`
+      );
       axios.get(url).then((loc) => {
         const countryName = loc.data.geonames[0].countryName;
         const countryCode = getCountryCode(countryName);
@@ -25,4 +27,3 @@ export const language = new Promise((resolve) => {
     });
   }());
 });
-

@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "framework": "JS Frameworks",
+    "title": "Client-site Script",
+    "comments": [
+      "Better understanding of JavaScript, ECMAScript 6(ES-2015)",
+      "Working knowledge of reactjs, redux, react-router, redux-saga",
+      "Test frameworks like Jest, Enzyme etc"
+    ],
+    "level": "Advanced",
+    "examples": ["https://github.com/sureshHARDIYA/portfolio"]
+  },
+  {
+    "id": 2,
+    "framework": "CSS Frameworks",
+    "title": "Cascading Style Sheets",
+    "comments": [
+      "Working knowledge of CSS frameworks like Bootstrap(4), Foundation(6) and uikit",
+      "Working knowledge of SCSS and LESS"
+    ],
+    "level": "Intermediate",
+    "examples": ["https://github.com/sureshHARDIYA/portfolio"]
+  },
+  {
+    "id": 3,
+    "framework": "WordPress",
+    "title": "Content Management System",
+    "comments": [
+      "Themes and Plugins Development and customization",
+      "WordPress security and troubleshooting",
+      "Search Engine optimization",
+      "On-Page and off -page optimization",
+      "Link building, back-link building, directory submission, content optimization, blog commenting, book marking, social book marking, etc",
+      "Search Engine Marketing (SEM)",
+      "Search Media Marketing (SMM)"
+    ],
+    "level": "Advanced",
+    "examples": [
+      "https://github.com/sureshHARDIYA/SASPress",
+      "https://github.com/sureshHARDIYA/WordPress"
+    ]
+  },
+  {
+    "id": 4,
+    "framework": "PHP & MYSQL",
+    "title": "Server site Script and Database",
+    "comments": [
+      "Good Concepts of Object Oriented Programming paradigm",
+      "Working with MYSQL database with PHP",
+      "Familiar with using PHP with design patterns"
+    ],
+    "level": "Advanced",
+    "examples": [
+      "https://github.com/sureshHARDIYA/SASPress",
+      "https://github.com/sureshHARDIYA/WordPress"
+    ]
+  }
+]

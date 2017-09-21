@@ -66,15 +66,15 @@ export default function createRoutes(store) {
       name: 'portfolio',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          import('containers/Education/reducer'),
-          import('containers/Education/sagas'),
-          import('containers/Education'),
+          import('containers/Portfolio/reducer'),
+          import('containers/Portfolio/sagas'),
+          import('containers/Portfolio'),
         ]);
 
         const renderRoute = loadModule(cb);
 
         importModules.then(([reducer, sagas, component]) => {
-          injectReducer('educations', reducer.default);
+          injectReducer('portfolio', reducer.default);
           injectSagas(sagas.default);
 
           renderRoute(component);
@@ -87,16 +87,31 @@ export default function createRoutes(store) {
       path: '/skills',
       name: 'skills',
       getComponent(nextState, cb) {
-        import('containers/SkillsPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          import('containers/SkillsPage/reducer'),
+          import('containers/SkillsPage/sagas'),
+          import('containers/SkillsPage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('skills', reducer.default);
+          injectSagas(sagas.default);
+
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     },
     {
       path: '/contact',
       name: 'contact',
       getComponent(nextState, cb) {
-        import('containers/Contact').then(loadModule(cb)).catch(errorLoading);
+        import('containers/Contact')
+          .then(loadModule(cb))
+          .catch(errorLoading);
       },
     },
     {

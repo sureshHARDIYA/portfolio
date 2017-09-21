@@ -1,11 +1,19 @@
 {
+  "skmukhiya.component.Header.download_resume": "Resume",
   "skmukhiya.component.Header.educations": "Education",
   "skmukhiya.component.Header.portfolio": "Portfolio",
   "skmukhiya.components.Footer.author.message": "Made with love by {author}.",
   "skmukhiya.components.Footer.license.message": "This project is licensed under the MIT license.",
+  "skmukhiya.components.Header.blogs": "Blog",
   "skmukhiya.components.Header.contact": "Contact",
   "skmukhiya.components.Header.home": "Home",
   "skmukhiya.components.Header.skills": "Skills Set",
+  "skmukhiya.containers.Contact.header": "Contact Me",
+  "skmukhiya.containers.Contact.placeholderEmail": "Enter Email",
+  "skmukhiya.containers.Contact.placeholderPhone": "Phone",
+  "skmukhiya.containers.Contact.placeholderSendMessage": "Send Message",
+  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName": "Enter your full name.",
+  "skmukhiya.containers.Contact.submitButtonText": "Send Message",
   "skmukhiya.containers.FeaturePage.css.header": "Features",
   "skmukhiya.containers.FeaturePage.css.message": "Next generation CSS",
   "skmukhiya.containers.FeaturePage.feedback.header": "Instant feedback",
@@ -38,5 +46,8 @@
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
   "skmukhiya.containers.LocaleToggle.de": "de",
   "skmukhiya.containers.LocaleToggle.en": "en",
-  "skmukhiya.containers.NotFoundPage.header": "Page not found."
+  "skmukhiya.containers.NotFoundPage.header": "Page not found.",
+  "skmukhiya.containers.Portfolio.getAllReposByMe": "Show open-source repositories by me",
+  "skmukhiya.containers.Portfolio.header": "Portfolio",
+  "skmukhiya.containers.Portfolio.headerMessage": "Checkout list of repositories I have contributed to."
 }

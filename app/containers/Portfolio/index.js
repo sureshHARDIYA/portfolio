@@ -1,71 +1,98 @@
-/*
- * Education
- *
- * This is the first thing users see of our App, at the '/' route
- */
-
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { FormattedMessage } from 'react-intl';
 
-import { makeSelectError } from 'containers/App/selectors';
 import PageContainer from 'components/PageContainer';
 import H2 from 'components/H2';
-import { makeSelectEducation } from './selectors';
-import { loadEducations } from './actions';
+import CallToActionButton from 'components/CallToActionButton';
+import ReposList from 'components/ReposList';
 
-export class Education extends React.PureComponent {
-  componentWillMount() {
-    this.props.loadEducations();
-  }
+import {
+  makeSelectRepos,
+  makeSelectLoading,
+  makeSelectError,
+} from './selectors';
+import { loadRepos } from './actions';
+import messages from './messages';
+import Center from './Center';
+
+export class Portfolio extends PureComponent {
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.loadRepos();
+  };
 
   render() {
-    const { educations } = this.props;
+    const { loading, error, repos } = this.props;
+    const reposListProps = {
+      loading,
+      error,
+      repos,
+    };
 
     return (
       <article>
         <Helmet
-          title="Education Page"
+          title="Portfolio Page"
           meta={[
             {
               name: 'description',
-              content: 'A React.js Boilerplate application homepage',
+              content: "Suresh Kumar Mukhiya's Portfolio Page",
             },
           ]}
         />
         <PageContainer>
-          <H2>Education</H2>
-          <ul>
-            {educations &&
-              educations.map((item) =>
-                <li key={item.id}>
-                  {item.year} - {item.school} - {item.grade} - {item.address} -{' '}
-                  {item.course}
-                </li>
-              )}
-          </ul>
+          <H2>
+            <FormattedMessage {...messages.header} />
+          </H2>
+          <p>
+            <FormattedMessage {...messages.headerMessage} />
+          </p>
+          <Center>
+            <CallToActionButton
+              background="#5bbc2e"
+              color="#fff"
+              paddingTop="15px"
+              paddingBottom="15px"
+              onClick={this.handleClick}
+            >
+              <FormattedMessage {...messages.getAllReposByMe} />
+            </CallToActionButton>
+          </Center>
+          <p />
+          <ReposList {...reposListProps} />
         </PageContainer>
       </article>
     );
   }
 }
 
-Education.propTypes = {
-  educations: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
-  loadEducations: PropTypes.func.isRequired,
+Portfolio.propTypes = {
+  loadRepos: PropTypes.func.isRequired,
+  loading: React.PropTypes.bool,
+  error: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.bool,
+  ]),
+  repos: React.PropTypes.oneOfType([
+    React.PropTypes.array,
+    React.PropTypes.bool,
+  ]),
 };
 
 export function mapDispatchToProps(dispatch) {
   return {
-    loadEducations: () => dispatch(loadEducations()),
+    loadRepos: () => dispatch(loadRepos()),
   };
 }
 
 const mapStateToProps = createStructuredSelector({
+  repos: makeSelectRepos(),
+  loading: makeSelectLoading(),
   error: makeSelectError(),
-  educations: makeSelectEducation(),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Education);
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
