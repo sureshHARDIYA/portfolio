@@ -33,7 +33,7 @@
     "मलाई सबैलाई नमस्कार भन्न चाहन्छु।",
   "skmukhiya.containers.HomePage.start_project.header": "व्यक्तिगत अभिव्यक्ति",
   "skmukhiya.containers.HomePage.start_project.message":
-    "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+    "म React, Redux, ECMAScript 6, Laravel, PHP7, र WordPress जस्तै नवीनतम प्रविधिको प्रयोग गरेर web application विकास गर्ने developer हुँ। म Apache spark साथमा big data विश्लेषणमा समय बिताउन चाहन्छु। त्यसबाहेक, म फोटोग्राफी गर्छु।",
   "skmukhiya.containers.HomePage.tryme.atPrefix": "@",
   "skmukhiya.containers.HomePage.tryme.header": "Try me!",
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
@@ -43,7 +43,7 @@
   "skmukhiya.containers.NotFoundPage.header":
     "पपृष्ठ उपलब्ध छैन | सायद हामी यो पेजमा काम गर्दै छौँ होला। केही क्षणमा पुनः प्रयास गर्नुहोस्।",
   "skmukhiya.containers.Portfolio.getAllReposByMe":
-    "मेरो द्वारा प्रकाशित  open-source repositories देखाउनुहोस्।",
+    "मैले योगदान दिएका open-source repositories सूची हेर्नुहोस्।",
   "skmukhiya.containers.Portfolio.header": "पोर्टफोलियो",
   "skmukhiya.containers.Portfolio.headerMessage":
     "मैले योगदान दिएका repositories चेकआउट गर्नुहोस्।"
