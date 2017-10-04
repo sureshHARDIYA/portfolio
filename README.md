@@ -24,5 +24,5 @@ Demo should be ready at: http://localhost:3000
 
 ## Credits
 
-![BrowserStack Logo](https://cdn.rawgit.com/sureshHARDIYA/portfolio/assets/vendor/browserstack.svg)
+![BrowserStack Logo](https://cdn.rawgit.com/sureshHARDIYA/portfolio/e2f31a2a/assets/vendor/browserstack.svg)
 A Big thanks to [BrowserStack](https://www.browserstack.com) for providing cross browser testing to Open Source projects!
