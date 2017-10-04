@@ -20,4 +20,9 @@ Demo should be ready at: http://localhost:3000
 - [redux-saga](https://github.com/redux-saga/redux-saga)
 - [react-intl](https://github.com/yahoo/react-intl)
 - [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
-- and others 
+- and others
+
+## Credits
+
+![BrowserStack Logo](https://cdn.rawgit.com/sureshHARDIYA/portfolio/assets/vendor/browserstack.svg)
+A Big thanks to [BrowserStack](https://www.browserstack.com) for providing cross browser testing to Open Source projects!
