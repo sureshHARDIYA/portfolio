@@ -22,23 +22,25 @@ const TimeLine = styled.div`
     background: ${colors.brandGreen};
     border: 0 solid transparent;  
     box-shadow: 0 0 0 8px ${colors.brandGreenLight};
-   
-    &: after {
+
+    &:after {
       content: '';
       position: absolute;
       z-index: 0;
-      bottom: -160px;
+      bottom: -210px;
       left: 50%;
       display: inline-block;
       transform: translate(-50%);
       background: ${colors.brandGreenLight};
-      height: 170px;
+      height: 210px;
       width: 0.625rem;
       border: 0 solid transparent;
+  
       
       @media screen and (max-width: 780px){
         display: none;
       }
+     
     }
   }
 `;
