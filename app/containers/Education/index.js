@@ -23,7 +23,7 @@ export class Education extends React.PureComponent {
     return (
       <article>
         <Helmet
-          title="Education Page"
+          title="Education"
           meta={[
             {
               name: 'description',
