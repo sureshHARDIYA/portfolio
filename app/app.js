@@ -29,6 +29,7 @@ import '!file-loader?name=[name].[ext]!./manifest.json';
 import 'file-loader?name=[name].[ext]!./.htaccess'; // eslint-disable-line import/extensions
 /* eslint-enable import/no-webpack-loader-syntax */
 
+import './style.css';
 import configureStore from './store';
 
 // Import i18n messages
@@ -81,9 +82,11 @@ const render = (messages) => {
         <Router
           history={history}
           routes={rootRoute}
-          render={// Scroll to top when going to a new page, imitating default browser
-          // behaviour
-            applyRouterMiddleware(useScroll())}
+          render={
+            // Scroll to top when going to a new page, imitating default browser
+            // behaviour
+            applyRouterMiddleware(useScroll())
+          }
         />
       </LanguageProvider>
     </Provider>,
