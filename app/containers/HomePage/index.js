@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
@@ -8,12 +8,20 @@ import styled from 'styled-components';
 
 import { makeSelectGeneralData } from 'containers/App/selectors';
 import H2 from 'components/H2';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
 
 import GitHub2 from 'components/Icons/GitHub2';
 import Upwork from 'components/Icons/Upwork';
 import LinkedIn from 'components/Icons/LinkedIn';
 import WordPress from 'components/Icons/WordPress';
 import A from 'components/A';
+import Education from 'components/Icons/Education';
+import Portfolio from 'components/Icons/Portfolio';
+
+import 'react-vertical-timeline-component/style.min.css';
 
 import CenteredSection from './CenteredSection';
 import Section from './Section';
@@ -42,7 +50,7 @@ const ReferenceItem = styled.li`
   }
 `;
 
-export class HomePage extends React.PureComponent {
+export class HomePage extends Component {
   componentWillMount() {
     this.props.loadGeneralData();
   }
@@ -70,43 +78,38 @@ export class HomePage extends React.PureComponent {
               <FormattedMessage {...messages.startProjectMessage} />
             </p>
           </CenteredSection>
-          <Section background="#f9f9f9">
-            <H2>Languages</H2>
-            <ul>
-              {general.languages &&
-                general.languages.map((item) =>
-                  (<li key={item.id}>
-                    {item.id} -
-                    {item.name} -
-                    {item.level} -
-                    {item.comment} -
-                  </li>)
-                )}
-            </ul>
-          </Section>
-          <Section>
-            <H2>Awards</H2>
-            <ul>
-              {general.awards &&
-                general.awards.map((item) =>
-                  (<li key={item.id}>
-                    {item.id} -
-                    {item.year}
-                    {item.title} -
-                  </li>)
-                )}
-            </ul>
-          </Section>
-          <Section background="#f9f9f9">
-            <H2>Hobbies</H2>
-            <ul>
-              {general.interests &&
-                general.interests.map((item) =>
-                  (<li key={item}>
-                    {item}
-                  </li>)
-                )}
-            </ul>
+          <Section background="#e3e3e3">
+            <VerticalTimeline>
+              {general.timelines &&
+                general.timelines.map((item) => (
+                  <VerticalTimelineElement
+                    className={
+                      item.type === 'education'
+                        ? 'vertical-timeline-element--education'
+                        : 'vertical-timeline-element--work'
+                    }
+                    date={item.year}
+                    iconStyle={{
+                      background:
+                        item.type === 'education'
+                          ? '#5bbc2e'
+                          : 'rgb(33, 150, 243)',
+                      color: '#fff',
+                    }}
+                    icon={
+                      item.type === 'education' ? <Education /> : <Portfolio />
+                    }
+                  >
+                    <h3 className="vertical-timeline-element-title">
+                      {item.title}
+                    </h3>
+                    <h4 className="vertical-timeline-element-subtitle">
+                      <A href={item.more}>{item.school}</A>
+                    </h4>
+                    <p>{item.description}</p>
+                  </VerticalTimelineElement>
+                ))}
+            </VerticalTimeline>
           </Section>
           <Section>
             <ReferenceWrapper>

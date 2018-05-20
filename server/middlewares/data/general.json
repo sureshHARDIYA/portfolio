@@ -52,7 +52,8 @@
     "upwork": "https://www.upwork.com/freelancers/~0182e0779315e50896",
     "linkedin": "http://www.linkedin.com/pub/suresh-kumar-mukhiya/35/82a/651",
     "personal": "www.skmukhiya.com.np",
-    "wordpressPlugin": "https://profiles.wordpress.org/sureshhardiya/#content-plugins"
+    "wordpressPlugin":
+      "https://profiles.wordpress.org/sureshhardiya/#content-plugins"
   },
   "interests": [
     "Blogging",
@@ -72,6 +73,135 @@
       "id": 2,
       "year": "2013",
       "title": "Awarded Nepal Board Topper, TU, Vice Chancellor Award"
+    }
+  ],
+  "timelines": [
+    {
+      "id": 10,
+      "year": "2017-present",
+      "title": "Frontend Developer",
+      "school": "Festpop Inc.",
+      "location": "Remote Work",
+      "description":
+        "FestPop is based on an aggregation business model. This means that music lovers can plan their entire festival experience using the site. This includes booking tickets and hotels to buying music festival gear to connecting with fellow music enthusiasts.",
+      "more": "https://festpop.com/",
+      "type": "work",
+      "stack":
+        "reactjs, redux, redux-saga, react-router, nodejs, express, webpack, babel, sequelize, react-helmet, MySQL"
+    },
+    {
+      "id": 9,
+      "year": "2017-present",
+      "title": "Frontend Developer",
+      "school": "Landed, Inc. DRE, San Francisco.",
+      "location": "Remote Work",
+      "description":
+        "Landed is a company with the mission to help essential professionals build financial security near the communities they serve. The company uses Reactjs, redux, react-router, redux-saga, nodejs etc as front-end technologies to build the Web Application. In addition to this, the company uses PostgreSQL to handle database.",
+      "more": "https://www.landed.com/",
+      "type": "work",
+      "stack":
+        "reactjs, redux, redux-saga, react-router, nodejs, express, webpack, babel, sequelize, react-helmet, PostgreSQL"
+    },
+    {
+      "id": 9,
+      "year": "2016-2017",
+      "title": "Frontend Developer",
+      "school": "Sincos Software AS",
+      "location": "Norway",
+      "description":
+        "24estore is a Norwegian company that develops e-commerce solutions for customers around the world. The company uses Reactjs, redux, react-router, redux-saga, node etc as front-end technologies and Laravel for building API. The development team follows TDD paradigm and uses SCRUM as project management tool.",
+      "more": "https://www.24nettbutikk.no/",
+      "type": "work",
+      "stack":
+        "reactjs, redux, redux-saga, react-router, nodejs, express, webpack, babel, sequelize, react-helmet, MySQL, docker, vagrant"
+    },
+    {
+      "id": 8,
+      "year": "2014-2016",
+      "title": "Frontend Developer/Freelancer",
+      "school": "www.upwork.com.",
+      "location": "Nepal",
+      "description":
+        "Worked as full time (till 2014) and now part time freelancer in upwork, providing services like Website development and designing, WordPress theme development and customization, WordPress plugin development and customization, Web application development consulting services, Search Engine Optimization etc ",
+      "more": "www.upwork.com",
+      "type": "work"
+    },
+    {
+      "id": 7,
+      "year": "2015-2016",
+      "title": "Web Developer",
+      "school": "nowHow AS",
+      "location": "Munkebyvegen 254, 7608 Levanger, Norway",
+      "description":
+        "Responsible of design and development of Learning Management System using WordPress in multisite environment. Developed ad-dons and plugins that are compatible with LearnDash LMS plugin that integrates with the system.",
+      "more": "https://nowhow.no/",
+      "type": "work"
+    },
+    {
+      "id": 6,
+      "year": "2013-2014",
+      "title": "WordPress Developer",
+      "school": "codeBox",
+      "location": "Trondheim, Norway",
+      "description":
+        "Remote Work. Development of websites using their theme framework PushPress developed for WordPress.",
+      "more": "https://lifterlms.com/",
+      "type": "work"
+    },
+    {
+      "id": 5,
+      "year": "2014-2016",
+      "title": "Masters In Information System",
+      "school": "Kathford International College of Engineering and Management.",
+      "location": "Trondheim, Norway",
+      "description":
+        "Hardiya is a village development committee in Saptari District in the Sagarmatha Zone of south-eastern Nepal. At the time of the 2011 Nepal census it had a population of 5,286 people living in 1,139 individual households.",
+      "more": "http://www.ntnu.no/",
+      "type": "education"
+    },
+    {
+      "id": 4,
+      "year": "2008-2013",
+      "title": "Bachelor in Computer Science and Informaiton Technology",
+      "school": "Kathford International College of Engineering and Management.",
+      "location": "Nepal, Kathmandu Valley",
+      "description":
+        "Hardiya is a village development committee in Saptari District in the Sagarmatha Zone of south-eastern Nepal. At the time of the 2011 Nepal census it had a population of 5,286 people living in 1,139 individual households.",
+      "more": "http://www.caspian.edu.np/",
+      "type": "education"
+    },
+    {
+      "id": 3,
+      "year": "2005-2007",
+      "title": "Higher Secondary Education Board (HSEB)",
+      "school": "Caspian Valley College",
+      "location": "Kumaripati, Lalitpur, Nepal",
+      "description":
+        "Hardiya is a village development committee in Saptari District in the Sagarmatha Zone of south-eastern Nepal. At the time of the 2011 Nepal census it had a population of 5,286 people living in 1,139 individual households.",
+      "more": "http://www.caspian.edu.np/",
+      "type": "education"
+    },
+    {
+      "id": 2,
+      "year": "1999-2004",
+      "title": "School Leaving Certificate (SLC)",
+      "school": "Lalitpur Secondary English Boarding School",
+      "location": "Kathmandu, Nepal",
+      "description":
+        "Hardiya is a village development committee in Saptari District in the Sagarmatha Zone of south-eastern Nepal. At the time of the 2011 Nepal census it had a population of 5,286 people living in 1,139 individual households.",
+      "more": "http://www.lmv.edu.np/",
+      "type": "education"
+    },
+    {
+      "id": 1,
+      "year": "1999 - 1995",
+      "title": "Primary Schooling",
+      "school": "Evergreen English Boarding School",
+      "location": "Birgunj, Jeetpur, Nepal",
+      "description":
+        "Hardiya is a village development committee in Saptari District in the Sagarmatha Zone of south-eastern Nepal. At the time of the 2011 Nepal census it had a population of 5,286 people living in 1,139 individual households.",
+      "more": "https://goo.gl/maps/3ZK6KBcg8nQ2",
+      "type": "education"
     }
   ]
 }
