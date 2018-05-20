@@ -21,7 +21,6 @@ const InputField = (props) => {
   );
 };
 
-
 InputField.propTypes = {
   config: PropTypes.shape({
     type: PropTypes.string,

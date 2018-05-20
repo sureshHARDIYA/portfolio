@@ -8,6 +8,7 @@ export function validateInputFields({ name, email, tel, message }) {
   const isNameValid = isString.test(name);
   const isEmailValid = isEmail.test(email);
   const isTelValid = isPhoneNumber.test(tel);
-  const isMessageValid = (typeof message === 'string' && message.trim().length !== 0);
-  return (isNameValid && isEmailValid && isMessageValid && isTelValid);
+  const isMessageValid =
+    typeof message === 'string' && message.trim().length !== 0;
+  return isNameValid && isEmailValid && isMessageValid && isTelValid;
 }
