@@ -25,8 +25,25 @@ module.exports = (options) => ({
       },
       {
         test: /\.css$/,
-        include: /node_modules/,
-        loaders: ['style-loader', 'css-loader'],
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: require.resolve('postcss-loader'),
+            options: {
+              // Necessary for external CSS imports to work
+              // https://github.com/facebookincubator/create-react-app/issues/2677
+              ident: 'postcss',
+              // eslint-disable-next-line
+              plugins: () => [require('postcss-flexbugs-fixes')],
+            },
+          },
+        ],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
