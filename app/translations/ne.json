@@ -2,10 +2,8 @@
   "skmukhiya.component.Header.download_resume": "बायो डाटा",
   "skmukhiya.component.Header.educations": "शिक्षा",
   "skmukhiya.component.Header.portfolio": "पोर्टफोलियो",
-  "skmukhiya.components.Footer.author.message":
-    "{author} द्वारा प्रेम संग बनाइयो ।",
-  "skmukhiya.components.Footer.license.message":
-    "यो परियोजना एमआईटी लाइसेन्स अन्तर्गत इजाजतपत्र दिइएको छ।",
+  "skmukhiya.components.Footer.author.message": "{author} द्वारा प्रेम संग बनाइयो ।",
+  "skmukhiya.components.Footer.license.message": "यो परियोजना एमआईटी लाइसेन्स अन्तर्गत इजाजतपत्र दिइएको छ।",
   "skmukhiya.components.Header.blogs": "ब्लग",
   "skmukhiya.components.Header.contact": "सम्पर्क",
   "skmukhiya.components.Header.home": "गृहपृष्ठ",
@@ -14,37 +12,42 @@
   "skmukhiya.containers.Contact.placeholderEmail": "इमेल प्रविष्ट गर्नुहोस्",
   "skmukhiya.containers.Contact.placeholderPhone": "फोन",
   "skmukhiya.containers.Contact.placeholderSendMessage": "सन्देश पठाउनुहोस्",
-  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName":
-    "आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्।",
+  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName": "आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्।",
   "skmukhiya.containers.Contact.submitButtonText": "सन्देश पठाउनुहोस्",
+  "skmukhiya.containers.FeaturePage.css.header": "",
+  "skmukhiya.containers.FeaturePage.css.message": "",
+  "skmukhiya.containers.FeaturePage.feedback.header": "",
+  "skmukhiya.containers.FeaturePage.feedback.message": "",
   "skmukhiya.containers.FeaturePage.header": "कौशल र क्षमताहरू",
+  "skmukhiya.containers.FeaturePage.internationalization.header": "",
+  "skmukhiya.containers.FeaturePage.internationalization.message": "",
+  "skmukhiya.containers.FeaturePage.javascript.header": "",
+  "skmukhiya.containers.FeaturePage.javascript.message": "",
+  "skmukhiya.containers.FeaturePage.network.header": "",
+  "skmukhiya.containers.FeaturePage.network.message": "",
+  "skmukhiya.containers.FeaturePage.routing.header": "",
+  "skmukhiya.containers.FeaturePage.routing.message": "",
+  "skmukhiya.containers.FeaturePage.scaffolding.header": "",
+  "skmukhiya.containers.FeaturePage.scaffolding.message": "",
+  "skmukhiya.containers.FeaturePage.state_management.header": "",
+  "skmukhiya.containers.FeaturePage.state_management.message": "",
   "skmukhiya.containers.HomePage.CallToActionButton": "मलाई सम्पर्क गर्नुस्",
   "skmukhiya.containers.HomePage.CallToActionButtonHeader": "सम्पर्क",
-  "skmukhiya.containers.HomePage.CallToActionButtonHire":
-    "मलाई नियुक्त गर्नुहोस्",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText":
-    "मलाई कोड मनपर्छ।",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText":
-    "म फ्रोंन्टइन्ड विकासकर्ता हुँ।",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText":
-    "मलाई पिज्जा र कफी मन पर्छ।",
+  "skmukhiya.containers.HomePage.CallToActionButtonHire": "मलाई नियुक्त गर्नुहोस्",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText": "मलाई कोड मनपर्छ।",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText": "म फ्रोंन्टइन्ड विकासकर्ता हुँ।",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText": "मलाई पिज्जा र कफी मन पर्छ।",
   "skmukhiya.containers.HomePage.HeaderInnerNameCardText": "S.K. Mukhiya",
-  "skmukhiya.containers.HomePage.callToActionMessage":
-    "मलाई सबैलाई नमस्कार भन्न चाहन्छु।",
+  "skmukhiya.containers.HomePage.callToActionMessage": "मलाई सबैलाई नमस्कार भन्न चाहन्छु।",
   "skmukhiya.containers.HomePage.start_project.header": "व्यक्तिगत अभिव्यक्ति",
-  "skmukhiya.containers.HomePage.start_project.message":
-    "म React, Redux, ECMAScript 6, Laravel, PHP7, र WordPress जस्तै नवीनतम प्रविधिको प्रयोग गरेर web application विकास गर्ने developer हुँ। म Apache spark साथमा big data विश्लेषणमा समय बिताउन चाहन्छु। त्यसबाहेक, म फोटोग्राफी गर्छु।",
+  "skmukhiya.containers.HomePage.start_project.message": "म React, Redux, ECMAScript 6, Laravel, PHP7, र WordPress जस्तै नवीनतम प्रविधिको प्रयोग गरेर web application विकास गर्ने developer हुँ। म Apache spark साथमा big data विश्लेषणमा समय बिताउन चाहन्छु। त्यसबाहेक, म फोटोग्राफी गर्छु।",
   "skmukhiya.containers.HomePage.tryme.atPrefix": "@",
   "skmukhiya.containers.HomePage.tryme.header": "Try me!",
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
   "skmukhiya.containers.LocaleToggle.de": "de",
   "skmukhiya.containers.LocaleToggle.en": "en",
-  "skmukhiya.containers.LocaleToggle.ne": "ne",
-  "skmukhiya.containers.NotFoundPage.header":
-    "पपृष्ठ उपलब्ध छैन | सायद हामी यो पेजमा काम गर्दै छौँ होला। केही क्षणमा पुनः प्रयास गर्नुहोस्।",
-  "skmukhiya.containers.Portfolio.getAllReposByMe":
-    "मैले योगदान दिएका open-source repositories सूची हेर्नुहोस्।",
+  "skmukhiya.containers.NotFoundPage.header": "पपृष्ठ उपलब्ध छैन | सायद हामी यो पेजमा काम गर्दै छौँ होला। केही क्षणमा पुनः प्रयास गर्नुहोस्।",
+  "skmukhiya.containers.Portfolio.getAllReposByMe": "मैले योगदान दिएका open-source repositories सूची हेर्नुहोस्।",
   "skmukhiya.containers.Portfolio.header": "पोर्टफोलियो",
-  "skmukhiya.containers.Portfolio.headerMessage":
-    "मैले योगदान दिएका repositories चेकआउट गर्नुहोस्।"
+  "skmukhiya.containers.Portfolio.headerMessage": "मैले योगदान दिएका repositories चेकआउट गर्नुहोस्।"
 }

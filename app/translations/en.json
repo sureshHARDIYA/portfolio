@@ -3,8 +3,7 @@
   "skmukhiya.component.Header.educations": "Education",
   "skmukhiya.component.Header.portfolio": "Portfolio",
   "skmukhiya.components.Footer.author.message": "Made with love by {author}.",
-  "skmukhiya.components.Footer.license.message":
-    "This project is licensed under the MIT license.",
+  "skmukhiya.components.Footer.license.message": "This project is licensed under the MIT license.",
   "skmukhiya.components.Header.blogs": "Blog",
   "skmukhiya.components.Header.contact": "Contact",
   "skmukhiya.components.Header.home": "Home",
@@ -13,39 +12,42 @@
   "skmukhiya.containers.Contact.placeholderEmail": "Enter Email",
   "skmukhiya.containers.Contact.placeholderPhone": "Phone",
   "skmukhiya.containers.Contact.placeholderSendMessage": "Send Message",
-  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName":
-    "Enter your full name.",
+  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName": "Enter your full name.",
   "skmukhiya.containers.Contact.submitButtonText": "Send Message",
   "skmukhiya.containers.FeaturePage.css.header": "Features",
   "skmukhiya.containers.FeaturePage.css.message": "Next generation CSS",
   "skmukhiya.containers.FeaturePage.feedback.header": "Instant feedback",
-  "skmukhiya.containers.FeaturePage.feedback.message":
-    "Enjoy the best DX and code your app at the speed of thought! Your\n    saved changes to the CSS and JS are reflected instantaneously\n    without refreshing the page. Preserve application state even when\n    you update something in the underlying code!",
+  "skmukhiya.containers.FeaturePage.feedback.message": "Enjoy the best DX and code your app at the speed of thought! Your\n    saved changes to the CSS and JS are reflected instantaneously\n    without refreshing the page. Preserve application state even when\n    you update something in the underlying code!",
   "skmukhiya.containers.FeaturePage.header": "Features",
+  "skmukhiya.containers.FeaturePage.internationalization.header": "Complete i18n Standard Internationalization & Pluralization",
+  "skmukhiya.containers.FeaturePage.internationalization.message": "Scalable apps need to support multiple languages, easily add and support multiple languages with `react-intl`.",
+  "skmukhiya.containers.FeaturePage.javascript.header": "Next generation JavaScript",
+  "skmukhiya.containers.FeaturePage.javascript.message": "Use template strings, object destructuring, arrow functions, JSX\n    syntax and more, today.",
+  "skmukhiya.containers.FeaturePage.network.header": "Offline-first",
+  "skmukhiya.containers.FeaturePage.network.message": "The next frontier in performant web apps: availability without a\n      network connection from the instant your users load the app.",
+  "skmukhiya.containers.FeaturePage.routing.header": "Industry-standard routing",
+  "skmukhiya.containers.FeaturePage.routing.message": "Write composable CSS that's co-located with your components for\n    complete modularity. Unique generated class names keep the\n    specificity low while eliminating style clashes. Ship only the\n    styles that are on the page for the best performance.",
+  "skmukhiya.containers.FeaturePage.scaffolding.header": "Quick scaffolding",
+  "skmukhiya.containers.FeaturePage.scaffolding.message": "Automate the creation of components, containers, routes, selectors\n  and sagas - and their tests - right from the CLI!",
+  "skmukhiya.containers.FeaturePage.state_management.header": "Predictable state management",
+  "skmukhiya.containers.FeaturePage.state_management.message": "Unidirectional data flow allows for change logging and time travel\n    debugging.",
   "skmukhiya.containers.HomePage.CallToActionButton": "Contact Me",
   "skmukhiya.containers.HomePage.CallToActionButtonHeader": "Contact",
   "skmukhiya.containers.HomePage.CallToActionButtonHire": "Hire Me",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText":
-    "I like to code.",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText":
-    "I am Frontend Developer.",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText":
-    "I like Pizza and Coffee.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText": "I like to code.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText": "I am Frontend Developer.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText": "I like Pizza and Coffee.",
   "skmukhiya.containers.HomePage.HeaderInnerNameCardText": "S.K. Mukhiya",
-  "skmukhiya.containers.HomePage.callToActionMessage":
-    "I like to say hello to everyone.",
+  "skmukhiya.containers.HomePage.callToActionMessage": "I like to say hello to everyone.",
   "skmukhiya.containers.HomePage.start_project.header": "Personal statement",
-  "skmukhiya.containers.HomePage.start_project.message":
-    "I am Frontend developer with a passion in Web Application development using latest technologies like React, Redux, ECMAScript 6, Laravel, PHP7, and WordPress. I prefer spending time analyzing big data with Apache Spark. Apart from that, I do photography.",
+  "skmukhiya.containers.HomePage.start_project.message": "I am Frontend developer with a passion in Web Application development using latest technologies like React, Redux, ECMAScript 6, Laravel, PHP7, and WordPress. I prefer spending time analyzing big data with Apache Spark. Apart from that, I do photography.",
   "skmukhiya.containers.HomePage.tryme.atPrefix": "@",
   "skmukhiya.containers.HomePage.tryme.header": "Try me!",
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
   "skmukhiya.containers.LocaleToggle.de": "de",
   "skmukhiya.containers.LocaleToggle.en": "en",
   "skmukhiya.containers.NotFoundPage.header": "Page not found.",
-  "skmukhiya.containers.Portfolio.getAllReposByMe":
-    "Show open-source repositories by me",
+  "skmukhiya.containers.Portfolio.getAllReposByMe": "Show open-source repositories by me",
   "skmukhiya.containers.Portfolio.header": "Portfolio",
-  "skmukhiya.containers.Portfolio.headerMessage":
-    "Checkout list of repositories I have contributed to."
+  "skmukhiya.containers.Portfolio.headerMessage": "Checkout list of repositories I have contributed to."
 }

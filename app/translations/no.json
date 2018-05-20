@@ -2,10 +2,8 @@
   "skmukhiya.component.Header.download_resume": "",
   "skmukhiya.component.Header.educations": "Utdanning",
   "skmukhiya.component.Header.portfolio": "Portfolio",
-  "skmukhiya.components.Footer.author.message":
-    "Laget med kjærlighet av {author}.",
-  "skmukhiya.components.Footer.license.message":
-    "Dette prosjektet er lisensiert under MIT-lisensen.",
+  "skmukhiya.components.Footer.author.message": "Laget med kjærlighet av {author}.",
+  "skmukhiya.components.Footer.license.message": "Dette prosjektet er lisensiert under MIT-lisensen.",
   "skmukhiya.components.Header.blogs": "Blog",
   "skmukhiya.components.Header.contact": "Kontakt",
   "skmukhiya.components.Header.home": "Hjem",
@@ -14,34 +12,42 @@
   "skmukhiya.containers.Contact.placeholderEmail": "Skriv inn e-post",
   "skmukhiya.containers.Contact.placeholderPhone": "Skriv inn telefon",
   "skmukhiya.containers.Contact.placeholderSendMessage": "Sende melding",
-  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName":
-    "Skriv ditt fulle navn.",
+  "skmukhiya.containers.Contact.scaffolding.placeholderTextFullName": "Skriv ditt fulle navn.",
   "skmukhiya.containers.Contact.submitButtonText": "Sende melding",
   "skmukhiya.containers.FeaturePage.css.header": "Egenskaper",
+  "skmukhiya.containers.FeaturePage.css.message": "",
+  "skmukhiya.containers.FeaturePage.feedback.header": "",
+  "skmukhiya.containers.FeaturePage.feedback.message": "",
+  "skmukhiya.containers.FeaturePage.header": "",
+  "skmukhiya.containers.FeaturePage.internationalization.header": "",
+  "skmukhiya.containers.FeaturePage.internationalization.message": "",
+  "skmukhiya.containers.FeaturePage.javascript.header": "",
+  "skmukhiya.containers.FeaturePage.javascript.message": "",
+  "skmukhiya.containers.FeaturePage.network.header": "",
+  "skmukhiya.containers.FeaturePage.network.message": "",
+  "skmukhiya.containers.FeaturePage.routing.header": "",
+  "skmukhiya.containers.FeaturePage.routing.message": "",
+  "skmukhiya.containers.FeaturePage.scaffolding.header": "",
+  "skmukhiya.containers.FeaturePage.scaffolding.message": "",
+  "skmukhiya.containers.FeaturePage.state_management.header": "",
+  "skmukhiya.containers.FeaturePage.state_management.message": "",
   "skmukhiya.containers.HomePage.CallToActionButton": "Kontakt meg",
   "skmukhiya.containers.HomePage.CallToActionButtonHeader": "Kontakt",
   "skmukhiya.containers.HomePage.CallToActionButtonHire": "Ansette meg",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText":
-    "Jeg liker å kode.",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText":
-    "Jeg er frontendutvikler.",
-  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText":
-    "Jeg liker Pizza og kaffe.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionCodeText": "Jeg liker å kode.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionDeveloperText": "Jeg er frontendutvikler.",
+  "skmukhiya.containers.HomePage.HeaderInnerDescriptionPizzaText": "Jeg liker Pizza og kaffe.",
   "skmukhiya.containers.HomePage.HeaderInnerNameCardText": "S.K. Mukhiya",
-  "skmukhiya.containers.HomePage.callToActionMessage":
-    "Jeg liker å si hei til alle.",
+  "skmukhiya.containers.HomePage.callToActionMessage": "Jeg liker å si hei til alle.",
   "skmukhiya.containers.HomePage.start_project.header": "Personlig uttalelse",
-  "skmukhiya.containers.HomePage.start_project.message":
-    "Jeg er Frontend-utvikler med en lidenskap i utvikling av webapplikasjon ved hjelp av nyeste teknologier som React, Redux, ECMAScript 6, Laravel, PHP7 og WordPress. Jeg foretrekker å bruke tid på å analysere store data med Apache Spark. Bortsett fra det, gjør jeg fotografering.",
+  "skmukhiya.containers.HomePage.start_project.message": "Jeg er Frontend-utvikler med en lidenskap i utvikling av webapplikasjon ved hjelp av nyeste teknologier som React, Redux, ECMAScript 6, Laravel, PHP7 og WordPress. Jeg foretrekker å bruke tid på å analysere store data med Apache Spark. Bortsett fra det, gjør jeg fotografering.",
   "skmukhiya.containers.HomePage.tryme.atPrefix": "@",
   "skmukhiya.containers.HomePage.tryme.header": "Try me!",
   "skmukhiya.containers.HomePage.tryme.message": "Show Github repositories by",
   "skmukhiya.containers.LocaleToggle.de": "de",
   "skmukhiya.containers.LocaleToggle.en": "en",
   "skmukhiya.containers.NotFoundPage.header": "Page ikke funnet.",
-  "skmukhiya.containers.Portfolio.getAllReposByMe":
-    "Vis åpne kildearkiver av meg",
+  "skmukhiya.containers.Portfolio.getAllReposByMe": "Vis åpne kildearkiver av meg",
   "skmukhiya.containers.Portfolio.header": "Portfolio",
-  "skmukhiya.containers.Portfolio.headerMessage":
-    "Checkout liste over lagre jeg har bidratt til."
+  "skmukhiya.containers.Portfolio.headerMessage": "Checkout liste over lagre jeg har bidratt til."
 }
