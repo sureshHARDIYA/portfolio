@@ -1,4 +1,4 @@
-# Portfolio (in progress)
+# Portfolio 
 This is still in development. This is my personal project developed to make easy portfolio site with `reactjs`, `redux`, `redux-saga`, `react-intl`, `styled-component` and other dependencies. The related dependencies will be cited once the development is completed.
 
 ## Demo ( In Progress)
@@ -26,3 +26,10 @@ Demo should be ready at: http://localhost:3000
 
 ![BrowserStack Logo](https://cdn.rawgit.com/sureshHARDIYA/portfolio/e2f31a2a/assets/vendor/browserstack.svg)
 Big thanks to [BrowserStack](https://www.browserstack.com) for providing cross-browser testing to Open Source projects!
+
+
+## Road Map
+
+- Create user authentication system with DB
+- Create Admin configuration panel for creating projects ( Title, Description, URL, image(s), Date, Reference, FeaturedImages etc)
+- Move the API data into DB currently served over JSON file. 
