@@ -69,7 +69,7 @@ export default class Header extends Component {
               <FormattedMessage {...messages.contact} />
             </MenuNameWrapper>
           </A>
-          <A href="http://download710.mediafire.com/xudrq4dm4jfg/zyov83v7ue9yaa2/curriculum-vitae.pdf">
+          <A href="https://github.com/sureshHARDIYA/Curriculum-Vitae/blob/master/Curriculum_Vitae.pdf">
             <Download />
             <MenuNameWrapper>
               <FormattedMessage {...messages.download_resume} />

@@ -7,7 +7,6 @@ import { FormattedMessage } from 'react-intl';
 
 import PageContainer from 'components/PageContainer';
 import H2 from 'components/H2';
-import CallToActionButton from 'components/CallToActionButton';
 import ReposList from 'components/ReposList';
 
 import {
@@ -17,13 +16,11 @@ import {
 } from './selectors';
 import { loadRepos } from './actions';
 import messages from './messages';
-import Center from './Center';
 
 export class Portfolio extends PureComponent {
-  handleClick = (event) => {
-    event.preventDefault();
+  componentDidMount() {
     this.props.loadRepos();
-  };
+  }
 
   render() {
     const { loading, error, repos } = this.props;
@@ -51,17 +48,6 @@ export class Portfolio extends PureComponent {
           <p>
             <FormattedMessage {...messages.headerMessage} />
           </p>
-          <Center>
-            <CallToActionButton
-              background="#5bbc2e"
-              color="#fff"
-              paddingTop="15px"
-              paddingBottom="15px"
-              onClick={this.handleClick}
-            >
-              <FormattedMessage {...messages.getAllReposByMe} />
-            </CallToActionButton>
-          </Center>
           <p />
           <ReposList {...reposListProps} />
         </PageContainer>
