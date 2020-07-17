@@ -220,7 +220,7 @@
     "intl": "1.2.5",
     "invariant": "2.2.2",
     "ip": "1.1.5",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "minimist": "1.2.2",
     "node-upwork": "0.0.7",
     "postcss-flexbugs-fixes": "3.3.1",
