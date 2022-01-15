@@ -297,7 +297,7 @@
     "prop-types": "15.5.10",
     "react-addons-test-utils": "15.4.1",
     "rimraf": "2.6.2",
-    "shelljs": "^0.7.5",
+    "shelljs": "^0.8.5",
     "sinon": "3.2.1",
     "style-loader": "0.18.2",
     "url-loader": "0.5.9",
